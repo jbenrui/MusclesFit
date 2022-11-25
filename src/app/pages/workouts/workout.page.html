@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon class="iconLogo" slot="end" name="american-football-outline"></ion-icon>
+    <ion-buttons>
+      <ion-back-button slot="start" defaultHref="/">Return to Home</ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-content class="ion-padding">
+    <ion-fab slot="fixed" vertical="top" horizontal="start">
+      <ion-fab-button>
+        <ion-icon name="filter-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list side="end">
+        <ion-fab-button id="btn" value="1">
+          <ion-img src="src/assets/logos/iconChest.webp"></ion-img>
+        </ion-fab-button>
+        <ion-fab-button>
+          <ion-img src="/src/assets/logos/IconArm.webp"></ion-img>
+        </ion-fab-button>
+        <ion-fab-button>
+          <ion-img src="/src/assets/logos/IconShoulder.webp"></ion-img>
+        </ion-fab-button>
+        <ion-fab-button>
+          <ion-img src="/src/assets/logos/IconLegDay.webp"></ion-img>
+        </ion-fab-button>
+        <ion-fab-button>
+          <ion-img src="/src/assets/logos/IconBack.webp"></ion-img>
+        </ion-fab-button>
+        <ion-fab-button>
+          
+        </ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>
+
+  <ion-grid>
+    <ion-row class="ion-align-items-center">
+      <ion-col *ngFor="let workout of getWorkout() | async"  size="9" size-sm="3" class="ion-align-self-center">
+        <app-exercise [workout]="workout"></app-exercise>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

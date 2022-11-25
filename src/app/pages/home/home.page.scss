@@ -1,0 +1,38 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+ion-img{
+  top: 50%;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  height: 100px;
+  
+}
+
+ion-content{
+  --ion-background-color: #85e6c0;
+}
+
+ion-button{
+  --ion-color-primary: #11e28f;
+}
+
+.logo{
+  width: 100px;
+  height: 100px;
+}

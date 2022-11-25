@@ -1,0 +1,7 @@
+{
+  "name": "Legacyfit",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
