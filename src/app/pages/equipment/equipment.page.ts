@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController, ModalController } from '@ionic/angular';
-import { EquipmentFormComponent } from 'src/app/core/equipment-form/equipment-form.component';
+import { EquipmentFormComponent } from 'src/app/core/components/equipment-form/equipment-form.component';
 import { Equipment } from 'src/app/core/model/equipment';
 import { EquipamentSVCService } from 'src/app/core/services/equipament-svc.service';
 import { WorkoutSVCService } from 'src/app/core/services/workout-svc.service';

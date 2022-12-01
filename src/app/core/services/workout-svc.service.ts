@@ -126,11 +126,31 @@ export class WorkoutSVCService {
   id:number = this._workout.length+1;
   constructor() { }
 
-  getWorkoutByCategory(id:number){
-    this._workout.find(category => category.id_category == id)
+  getWorkoutByCategory(id:number){ //Filter by Category
+    return this._workout.find(w => w.id_category == id)
   }
 
   getWorkoutByEquipment(id:number){
-    return this._workout.find(a => a.id_equipment == id);
+    return this._workout.find(w => w.id_equipment == id);
+  }
+
+  deleteWorkoutById(id:number){
+    this._workout = this._workout.filter(w=>w.id != id); 
+    this.workoutSubjetc.next(this._workout); 
+  }
+
+  addEquipment(exercise:Workout){
+    exercise.id = this.id++
+    this._workout.push(exercise)
+  }
+
+  updateEquipment(exercise:Workout){
+    var _exercise = this._workout.find(e=>e.id == e.id)
+    if (_exercise){
+      _exercise.name = exercise.name
+      _exercise.id_category = exercise.id_category
+      _exercise.id_equipment = exercise.id_equipment
+      _exercise.image = exercise.image
+    }
   }
 }

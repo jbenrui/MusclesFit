@@ -9,6 +9,7 @@ import { WorkoutPageRoutingModule } from './workout-routing.module';
 import { WorkoutPage } from './workout.page';
 import { CoreModule } from 'src/app/core/core.module';
 
+
 @NgModule({
   imports: [
     CommonModule,

@@ -1,0 +1,15 @@
+<ion-card>
+  <ion-card-header>
+    <!--
+  <img *ngIf="!category?.image" src="https://ionicframework.com/docs/img/demos/avatar.svg">
+  <img *ngIf="category?.image" src="{{category?.image}}">
+  -->
+  <ion-card-title>{{category?.nameCategory}}</ion-card-title>
+
+</ion-card-header>
+
+<ion-card-content>
+  <ion-button color ="tertiary" ><ion-icon name="create-outline"></ion-icon></ion-button>
+  <ion-button color ="danger"><ion-icon name="trash-outline"></ion-icon></ion-button>
+</ion-card-content>
+</ion-card>

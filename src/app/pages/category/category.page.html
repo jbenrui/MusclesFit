@@ -5,5 +5,14 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-grid>
+    <ion-row class="ion-align-items-center">
+      <ion-col *ngFor="let category of getCategory() | async"  size="9" size-sm="3" class="ion-align-self-center">
+        <app-category-item [category]="category" ></app-category-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-fab vertical="bottom" horizontal="end"  slot="fixed" >
+    <ion-fab-button><ion-icon style="zoom:2" name="add-outline"></ion-icon></ion-fab-button>
+  </ion-fab>
 </ion-content>

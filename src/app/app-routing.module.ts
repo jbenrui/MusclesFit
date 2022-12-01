@@ -27,6 +27,7 @@ const routes: Routes = [
     path: 'category',
     loadChildren: () => import('./pages/category/category.module').then( m => m.CategoryPageModule)
   },
+
 ];
 
 @NgModule({
