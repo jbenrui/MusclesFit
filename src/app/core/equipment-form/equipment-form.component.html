@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title slot="end">Formulario de Equipamiento.</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="onDismiss()">X</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" (keyup.enter)="onSubmit()">
+      <ion-item>
+        <ion-label position="floating">
+          Nombre
+        </ion-label>
+        <ion-input type="text" placeholder="Introduce el nombre de la tarea" formControlName="name_equipment"></ion-input>
+      </ion-item>
+      <ion-button [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modificar":"Añadir"}}</ion-button>
+    </form>
+</ion-content>

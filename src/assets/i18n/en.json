@@ -1,0 +1,22 @@
+{
+    "home":{
+        "btn_workout":"Workout",
+        "btn_diary":"Diary",
+        "btn_equipment":"Equipment",
+        "btn_category":"Category",
+        "btn_aboutme":"About Me"
+    },
+    "form":{
+        "etq_name":"Equipment's Name"
+    },
+    "formGeneral":{
+        "btn_add":"Add",
+        "btn_update":"Update"
+    },
+    "formEquipment":{
+        "tittle":"Register Equipment Form"
+    },
+    "general":{
+        "btn_cancel":"Cancel"
+    }
+}

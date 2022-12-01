@@ -1,0 +1,22 @@
+{
+    "home":{
+        "btn_workout":"Ejercicíos",
+        "btn_diary":"Diarío",
+        "btn_equipment":"Equipamiento",
+        "btn_category":"Categoría",
+        "btn_aboutme":"Sobre Mí"
+    },
+    "form":{
+        "etq_name":"Nombre del Equipamiento"
+    },
+    "formGeneral":{
+        "btn_add":"Añadir",
+        "btn_update":"Modificar"
+    },
+    "formEquipment":{
+        "tittle":"Formulario Regristro Equipaminto"
+    },
+    "general":{
+        "btn_cancel":"Cancelar"
+    }
+}

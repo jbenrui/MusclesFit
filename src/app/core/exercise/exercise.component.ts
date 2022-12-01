@@ -12,7 +12,7 @@ import { EquipamentSVCService } from '../services/equipament-svc.service';
 export class ExerciseComponent implements OnInit {
 
 
-  @Input() workout:Workout | undefined
+  @Input() workout:Workout | undefined;
   constructor(
     private equipmentSVC : EquipamentSVCService,
     private categorySVC : CategoryWorkoutSVCService
@@ -22,7 +22,6 @@ export class ExerciseComponent implements OnInit {
     
   }
 
-    
   getEquipmentById(id:number|undefined){
     if(id!=null)
       return this.equipmentSVC.getEquipmentById(id)?.name_equipment

@@ -27,10 +27,6 @@ const routes: Routes = [
     path: 'category',
     loadChildren: () => import('./pages/category/category.module').then( m => m.CategoryPageModule)
   },
-  {
-    path: 'abaout',
-    loadChildren: () => import('./pages/abaout/abaout.module').then( m => m.AbaoutPageModule)
-  },
 ];
 
 @NgModule({

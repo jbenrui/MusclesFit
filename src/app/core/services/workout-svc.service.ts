@@ -130,4 +130,7 @@ export class WorkoutSVCService {
     this._workout.find(category => category.id_category == id)
   }
 
+  getWorkoutByEquipment(id:number){
+    return this._workout.find(a => a.id_equipment == id);
+  }
 }

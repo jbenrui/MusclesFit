@@ -1,3 +1,16 @@
 <ion-app>
+  <ion-fab vertical="top" horizontal="end"  slot="fixed" >
+    <ion-fab-button color="success">
+      <ion-icon name="language-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="bottom">
+      <ion-fab-button (click)="clickOnLanguage('en')">
+        <ion-img src="../assets/logoGB.png"></ion-img>
+      </ion-fab-button>
+      <ion-fab-button (click)="clickOnLanguage('es')">
+        <ion-img src="../assets/logoES.png"></ion-img>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
   <ion-router-outlet></ion-router-outlet>
 </ion-app>

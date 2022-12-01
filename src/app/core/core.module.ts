@@ -3,7 +3,11 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { ExerciseComponent } from './exercise/exercise.component';
-import { PipesModule } from './pipes/pipes.module';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { createTranslateLoader } from './utils/translate';
+import { EquipmentItemComponent } from './equipment-item/equipment-item.component';
+import { EquipmentFormComponent } from './equipment-form/equipment-form.component';
 
 
 
@@ -14,7 +18,14 @@ import { PipesModule } from './pipes/pipes.module';
     FormsModule,
     IonicModule.forRoot(),//Indica que va a ser inyectado hacia la raiz de los modulos.
     ReactiveFormsModule,
-    PipesModule
+    HttpClientModule,
+    TranslateModule.forChild({
+      loader:{ 
+        provide:TranslateLoader,
+        useFactory:(createTranslateLoader),
+        deps:[HttpClient]  
+      }
+    }),
   ],
   exports:
   [
@@ -22,10 +33,15 @@ import { PipesModule } from './pipes/pipes.module';
     FormsModule,
     IonicModule,
     ExerciseComponent,
-    ReactiveFormsModule
+    EquipmentItemComponent,
+    EquipmentFormComponent,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   declarations:[
-    ExerciseComponent
+    ExerciseComponent,
+    EquipmentItemComponent,
+    EquipmentFormComponent
   ]
 
 })
