@@ -19,7 +19,7 @@ export class ExerciseFormComponent implements OnInit {
       this.form.controls['id'].setValue(exercise.id);
       this.form.controls['name'].setValue(exercise.name);
       this.form.controls['id_equipment'].setValue(exercise.id_equipment);
-      this.form.controls['id_category'].setValue(exercise.id_category);
+      //this.form.controls['id_category'].setValue(exercise.id_category);
       this.form.controls['image'].setValue(exercise.image);
       this.mode = "Edit";
       
@@ -33,7 +33,7 @@ export class ExerciseFormComponent implements OnInit {
       id:[null],
       name:['',[Validators.required]],
       id_equipment:['',[Validators.required]],
-      id_category:['',[Validators.required]],
+      //id_category:['',[Validators.required]],
       image:['']
     });
   }

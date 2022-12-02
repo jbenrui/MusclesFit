@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CategoryWorkout } from '../../model/categoryWorkout';
 
 @Component({
@@ -9,8 +9,19 @@ import { CategoryWorkout } from '../../model/categoryWorkout';
 export class CategoryItemComponent implements OnInit {
 
   @Input() category:CategoryWorkout | undefined;
+  @Output() onUpdate = new EventEmitter
+  @Output() onDelete = new EventEmitter;
+
   constructor() { }
 
   ngOnInit() {}
+
+  onUpdateClick(){
+    this.onUpdate.emit(this.category);
+  }
+
+  onDeleteClick(){
+    this.onDelete.emit(this.category);
+  }
 
 }

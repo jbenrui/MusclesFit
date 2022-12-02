@@ -7,15 +7,15 @@ import { Equipment } from '../../model/equipment';
   styleUrls: ['./equipment-item.component.scss'],
 })
 export class EquipmentItemComponent implements OnInit {
-  @Output() onEdit = new EventEmitter;
+  @Output() onUpdate = new EventEmitter;
   @Output() onDelete = new EventEmitter;
   @Input() equipment:Equipment | undefined;
   constructor() { }
 
   ngOnInit() {}
   
-  onEditClick(){
-    this.onEdit.emit(this.equipment);
+  onUpdateClick(){
+    this.onUpdate.emit(this.equipment);
   }
 
   onDeleteClick(){

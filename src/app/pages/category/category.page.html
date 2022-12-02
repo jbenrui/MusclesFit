@@ -1,6 +1,9 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>category</ion-title>
+    <ion-title slot="end">category</ion-title>
+    <ion-buttons>
+      <ion-back-button slot="start" defaultHref="/">Return to Home</ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -8,11 +11,11 @@
   <ion-grid>
     <ion-row class="ion-align-items-center">
       <ion-col *ngFor="let category of getCategory() | async"  size="9" size-sm="3" class="ion-align-self-center">
-        <app-category-item [category]="category" ></app-category-item>
+        <app-category-item [category]="category" (onUpdate)="onUpdateCategory($event)" (onDelete)="onDeleteCategory($event)"></app-category-item>
       </ion-col>
     </ion-row>
   </ion-grid>
   <ion-fab vertical="bottom" horizontal="end"  slot="fixed" >
-    <ion-fab-button><ion-icon style="zoom:2" name="add-outline"></ion-icon></ion-fab-button>
+    <ion-fab-button (click)="onAddCategory()"><ion-icon style="zoom:2" name="add-outline"></ion-icon></ion-fab-button>
   </ion-fab>
 </ion-content>

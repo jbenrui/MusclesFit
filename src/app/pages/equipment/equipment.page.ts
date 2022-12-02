@@ -50,10 +50,10 @@ export class EquipmentPage implements OnInit {
       });
   }
   
-  onNewEquipment(){
+  onAddEquipment(){
     this.equipmentForm(null);
   }
-  onEditEquipment(equipment:Equipment){
+  onUpdateEquipment(equipment:Equipment){
     this.equipmentForm(equipment);
   } 
   
@@ -87,7 +87,7 @@ export class EquipmentPage implements OnInit {
   async onEquipmentExistsAlert(equipment:any){
     const alert = await this.alert.create({
       header: 'Error',
-      message: 'No es posible borrar el equipamiento porque está asignada a un ejercicio',
+      message: 'No es posible borrar el equipamiento porque está asignado a un ejercicio',
       buttons: [
         {
           text: 'Cerrar',
@@ -103,17 +103,12 @@ export class EquipmentPage implements OnInit {
     const { role } = await alert.onDidDismiss();
   }
 
-  onDeletePerson(equipament:any){
+  onDeleteEquipment(equipament:any){
     if(!this.workoutSVC.getWorkoutByEquipment(equipament.id)){
-      
       this.onDeleteAlert(equipament);
-      console.log(equipament);
     }else{
-      console.log(this.workoutSVC.getWorkoutByEquipment(equipament.id));
       this.onEquipmentExistsAlert(equipament);
     }
-      
-    
   }
 }
 

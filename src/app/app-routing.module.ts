@@ -26,7 +26,11 @@ const routes: Routes = [
   {
     path: 'category',
     loadChildren: () => import('./pages/category/category.module').then( m => m.CategoryPageModule)
+  },  {
+    path: 'aboutme',
+    loadChildren: () => import('./pages/aboutme/aboutme.module').then( m => m.AboutmePageModule)
   },
+
 
 ];
 

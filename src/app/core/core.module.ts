@@ -10,6 +10,8 @@ import { EquipmentItemComponent } from './components/equipment-item/equipment-it
 import { EquipmentFormComponent } from './components/equipment-form/equipment-form.component';
 import { ExerciseFormComponent } from './components/exercise-form/exercise-form.component';
 import { CategoryItemComponent } from './components/category-item/category-item.component';
+import { CategoryFormComponent } from './components/category-form/category-form.component';
+import { EquipmentSelectableComponent } from './components/equipment-selectable/equipment-selectable.component';
 
 
 
@@ -35,19 +37,23 @@ import { CategoryItemComponent } from './components/category-item/category-item.
     FormsModule,
     IonicModule,
     ExerciseComponent,
+    EquipmentSelectableComponent,
     EquipmentItemComponent,
     EquipmentFormComponent,
     ExerciseFormComponent,
     ReactiveFormsModule,
     HttpClientModule,
-    CategoryItemComponent
+    CategoryItemComponent,
+    CategoryFormComponent
   ],
   declarations:[
     ExerciseComponent,
     EquipmentItemComponent,
     EquipmentFormComponent,
+    EquipmentSelectableComponent,
     ExerciseFormComponent,
     CategoryItemComponent,
+    CategoryFormComponent
   ]
 
 })

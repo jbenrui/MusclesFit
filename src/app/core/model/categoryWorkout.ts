@@ -1,4 +1,5 @@
 export interface CategoryWorkout{
     id:number,
-    nameCategory:string
+    nameCategory:string,
+    image:String
 }
