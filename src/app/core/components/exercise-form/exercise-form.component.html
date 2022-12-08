@@ -15,6 +15,7 @@
         <ion-input type="text" placeholder="Introduce el nombre del Ejercicio" formControlName="name"></ion-input>
       </ion-item>
       <app-equipment-selectable formControlName="id_equipment"></app-equipment-selectable>
+      <app-category-selectable formControlName="id_category"></app-category-selectable>
       <ion-button [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modificar":"Añadir"}}</ion-button>
     </form>
 </ion-content>

@@ -1,0 +1,25 @@
+<ion-accordion-group [multiple]="true" #accordion>
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ng-container *ngIf="selectedCategory!=null">
+          <ion-avatar class="category">
+            <ion-img *ngIf="!selectedCategory?.image" alt="Silhouette of a category's head" src="https://ionicframework.com/docs/ion-img/demos/avatar.svg" ></ion-img>
+            <ion-img *ngIf="selectedCategory?.image" alt="Category picture" [src]="selectedCategory?.image" ></ion-img>
+          </ion-avatar>
+          <ion-label>{{selectedCategory?.nameCategory}}</ion-label>
+        </ng-container>
+        <ion-label *ngIf="!selectedCategory">Selecciona una Categoria</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-list>
+          <ion-item *ngFor="let category of (getCategory() | async)" button detail  (click)="onCategoryClicked(category, accordion)">
+            <ion-avatar class="category">
+              <ion-img *ngIf="!category.image" alt="Silhouette of a category's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" ></ion-img>
+              <ion-img *ngIf="category.image" alt="category picture" [src]="category.image"></ion-img>
+            </ion-avatar>
+            <ion-label>{{category.nameCategory}}</ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>

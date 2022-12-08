@@ -127,7 +127,7 @@ export class WorkoutSVCService {
   constructor() { }
 
   getWorkoutByCategory(id:number){ //Filter by Category
-    return this._workout.find(w => w.id_category == id)
+    return this._workout.find(w => w.id_category == id);
   }
 
   getWorkoutByEquipment(id:number){
@@ -139,13 +139,13 @@ export class WorkoutSVCService {
     this.workoutSubjetc.next(this._workout); 
   }
 
-  addEquipment(exercise:Workout){
+  addWorkout(exercise:Workout){
     exercise.id = this.id++
-    this._workout.push(exercise)
+    this._workout.push(exercise);
   }
 
-  updateEquipment(exercise:Workout){
-    var _exercise = this._workout.find(e=>e.id == e.id)
+  updateWorkout(exercise:Workout){
+    var _exercise = this._workout.find(e=>e.id == e.id);
     if (_exercise){
       _exercise.name = exercise.name
       _exercise.id_category = exercise.id_category

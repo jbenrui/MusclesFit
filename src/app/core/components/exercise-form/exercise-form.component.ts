@@ -14,13 +14,13 @@ export class ExerciseFormComponent implements OnInit {
   mode: "New" | "Edit" = "New"; 
 
   
-  @Input('workout') set workout(exercise:Workout){
-    if(exercise){
-      this.form.controls['id'].setValue(exercise.id);
-      this.form.controls['name'].setValue(exercise.name);
-      this.form.controls['id_equipment'].setValue(exercise.id_equipment);
-      //this.form.controls['id_category'].setValue(exercise.id_category);
-      this.form.controls['image'].setValue(exercise.image);
+  @Input('workout') set workout(workout:Workout){
+    if(workout){
+      this.form.controls['id'].setValue(workout.id);
+      this.form.controls['name'].setValue(workout.name);
+      this.form.controls['id_equipment'].setValue(workout.id_equipment);
+      this.form.controls['id_category'].setValue(workout.id_category);
+      this.form.controls['image'].setValue(workout.image);
       this.mode = "Edit";
       
     }
@@ -33,7 +33,7 @@ export class ExerciseFormComponent implements OnInit {
       id:[null],
       name:['',[Validators.required]],
       id_equipment:['',[Validators.required]],
-      //id_category:['',[Validators.required]],
+      id_category:['',[Validators.required]],
       image:['']
     });
   }
@@ -41,7 +41,7 @@ export class ExerciseFormComponent implements OnInit {
   ngOnInit() {}
 
   onSubmit(){
-    this.modal.dismiss({exercise: this.form.value, mode: this.mode}, 'ok')
+    this.modal.dismiss({workout: this.form.value, mode: this.mode}, 'ok')
   }
 
   onDismiss(){

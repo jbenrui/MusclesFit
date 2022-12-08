@@ -42,10 +42,10 @@ export class WorkoutPage implements OnInit {
         if(result && result.data){
           switch(result.data.mode){
             case 'New':
-              this.workoutSVC.addEquipment(result.data.equipament);
+              this.workoutSVC.addWorkout(result.data.workout);
               break;
             case 'Edit':
-              this.workoutSVC.updateEquipment(result.data.equipament);
+              this.workoutSVC.updateWorkout(result.data.workout);
               break;
             default:
           }
@@ -53,7 +53,42 @@ export class WorkoutPage implements OnInit {
       });
   }
 
-  onNewWorkout(){
+  onAddWorkout(){
     this.workoutForm(null);
+  }
+  
+  onUpdateWorkout(workout:Workout){
+    this.workoutForm(workout);
+  } 
+
+async onDeleteAlert(workout:any){
+  const alert = await this.alert.create({
+    header: '¿Está seguro de que desear borrar el Ejercicio?',
+    buttons: [
+      {
+        text: 'Cancelar',
+        role: 'cancel',
+        handler: () => {
+          console.log("Operacion cancelada");
+        },
+      },
+      {
+        text: 'Borrar',
+        role: 'confirm',
+        handler: () => {
+            this.workoutSVC.deleteWorkoutById(workout.id);
+          
+        },
+      },
+    ],
+  });
+
+  await alert.present();
+  const { role } = await alert.onDidDismiss();
+
+}
+
+  onDeleteWorkout(workout:Workout){
+    this.onDeleteAlert(workout);
   }
 }

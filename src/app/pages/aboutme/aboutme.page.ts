@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { ScreenSizeSVCService } from 'src/app/core/services/screen-size-svc.service';
+
 
 @Component({
   selector: 'app-aboutme',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutmePage implements OnInit {
 
-  constructor() { }
+  screenHeight:number | undefined;
+  screenWidth:number | undefined;
+  constructor( 
+    private ScreenSize : ScreenSizeSVCService
+  ) { 
+      this.screenHeight = ScreenSize.getScreenSizeHeight()
+      this.screenWidth = ScreenSize.getScreenSizeWidth()
+      console.log(this.screenHeight + " " + this.screenWidth)
+  }
 
   ngOnInit() {
   }
-
 }

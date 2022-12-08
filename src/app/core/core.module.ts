@@ -12,6 +12,7 @@ import { ExerciseFormComponent } from './components/exercise-form/exercise-form.
 import { CategoryItemComponent } from './components/category-item/category-item.component';
 import { CategoryFormComponent } from './components/category-form/category-form.component';
 import { EquipmentSelectableComponent } from './components/equipment-selectable/equipment-selectable.component';
+import { CategorySelectableComponent } from './components/category-selectable/category-selectable.component';
 
 
 
@@ -20,7 +21,7 @@ import { EquipmentSelectableComponent } from './components/equipment-selectable/
   [
     CommonModule,
     FormsModule,
-    IonicModule.forRoot(),//Indica que va a ser inyectado hacia la raiz de los modulos.
+    IonicModule.forRoot(),
     ReactiveFormsModule,
     HttpClientModule,
     TranslateModule.forChild({
@@ -44,7 +45,8 @@ import { EquipmentSelectableComponent } from './components/equipment-selectable/
     ReactiveFormsModule,
     HttpClientModule,
     CategoryItemComponent,
-    CategoryFormComponent
+    CategoryFormComponent,
+    CategorySelectableComponent
   ],
   declarations:[
     ExerciseComponent,
@@ -53,7 +55,8 @@ import { EquipmentSelectableComponent } from './components/equipment-selectable/
     EquipmentSelectableComponent,
     ExerciseFormComponent,
     CategoryItemComponent,
-    CategoryFormComponent
+    CategoryFormComponent,
+    CategorySelectableComponent
   ]
 
 })

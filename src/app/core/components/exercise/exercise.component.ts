@@ -1,5 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { CategoryWorkout } from '../../model/categoryWorkout';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Workout } from '../../model/workout';
 import { CategoryWorkoutSVCService } from '../../services/category-workout-svc.service';
 import { EquipamentSVCService } from '../../services/equipament-svc.service';
@@ -13,6 +12,8 @@ export class ExerciseComponent implements OnInit {
 
 
   @Input() workout:Workout | undefined;
+  @Output() onUpdate = new EventEmitter;
+  @Output() onDelete = new EventEmitter;
   constructor(
     private equipmentSVC : EquipamentSVCService,
     private categorySVC : CategoryWorkoutSVCService
@@ -35,6 +36,12 @@ export class ExerciseComponent implements OnInit {
     return {};
   }
 
- 
+  onUpdateClick(){
+    this.onUpdate.emit(this.workout);
+  }
+
+  onDeleteClick(){
+    this.onDelete.emit(this.workout);
+  }
     
 }

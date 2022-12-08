@@ -4,7 +4,9 @@
         "btn_diary":"Diary",
         "btn_equipment":"Equipment",
         "btn_category":"Category",
-        "btn_aboutme":"About Me"
+        "btn_aboutme":"About Me",
+        "title":"Diary Fit",
+        "title_menu":"MusclesFit Menu"
     },
     "form":{
         "etq_name":"Equipment's Name"
@@ -18,5 +20,21 @@
     },
     "general":{
         "btn_cancel":"Cancel"
+    },
+    "aboutme":{
+        "title":"About Me",
+        "card_content":"This App has been developed with the final puporse that the user can keep track his advances in the Gym and be able to do a train plan in base at his progress",
+        "card_subtitle":"2 DAM's Student",
+        "tip":"How many time do you train an Muscular Group?",
+        "one_week":"Once a week",
+        "one_or_twoweek":"Once or Twice a week", 
+        "two_or_threeWeek":"Two or Three times a week"      
+    },
+    "groupMuscular":{
+        "upperbodyfront":"Chest",
+        "upperbodyback":"Back",
+        "lowerbody":"Legs",
+        "armsbody":"Shoulder and Arms",
+        "corebody":"Core"
     }
 }

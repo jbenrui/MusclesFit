@@ -25,7 +25,7 @@ export class CategoryPage implements OnInit {
   getCategory(){
     return this.categorySVC.category$;
   }
-  async equipmentForm (category:CategoryWorkout|null|undefined){
+  async categoryForm (category:CategoryWorkout|null|undefined){
     const modal = await this.modal.create({
         component:CategoryFormComponent,
         componentProps:{
@@ -50,10 +50,10 @@ export class CategoryPage implements OnInit {
 }
 
 onAddCategory(){
-  this.equipmentForm(null);
+  this.categoryForm(null);
 }
 onUpdateCategory(category:CategoryWorkout){
-  this.equipmentForm(category);
+  this.categoryForm(category);
 } 
 
 async onDeleteAlert(category:any){
@@ -83,10 +83,10 @@ async onDeleteAlert(category:any){
   const { role } = await alert.onDidDismiss();
 }
 
-async onCategoryExistsAlert(equipment:any){
+async onCategoryExistsAlert(category:any){
   const alert = await this.alert.create({
     header: 'Error',
-    message: 'No es posible borrar el equipamiento porque está asignado a un ejercicio',
+    message: 'No es posible borrar la categoria porque está asignada a un ejercicio',
     buttons: [
       {
         text: 'Cerrar',

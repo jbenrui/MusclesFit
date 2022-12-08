@@ -4,7 +4,9 @@
         "btn_diary":"Diarío",
         "btn_equipment":"Equipamiento",
         "btn_category":"Categoría",
-        "btn_aboutme":"Sobre Mí"
+        "btn_aboutme":"Sobre Mí",
+        "title":"Diario Fit",
+        "title_menu":"MusclesFit Menú"
     },
     "form":{
         "etq_name":"Nombre del Equipamiento"
@@ -18,5 +20,21 @@
     },
     "general":{
         "btn_cancel":"Cancelar"
+    },
+    "aboutme":{
+        "title":"Sobre Mí",
+        "card_content":"Esta aplicacion ha sido desarrollada con el fin de que el usuario pueda llevar un registro de sus avances en el gimnasio y asi poder preparar un plan de entrenamiento en base a tu pogreso.",
+        "card_subtitle":"Alumno de 2º DAM",
+        "tip":"¿Cuantas Veces Entrenar un Grupo Muscular?",
+        "one_week":"Una vez en semana",
+        "one_or_twoweek":"Una o Dos veces en semana",
+        "two_or_threeWeek":"Dos o Tres veces en semana"    
+    },
+    "groupMuscular":{
+        "upperbodyfront":"Pecho",
+        "upperbodyback":"Espalda",
+        "lowerbody":"Piernas",
+        "armsbody":"Hombros y Brazos",
+        "corebody":"Core"
     }
 }

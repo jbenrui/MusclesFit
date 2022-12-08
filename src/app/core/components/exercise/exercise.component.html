@@ -7,7 +7,7 @@
   </ion-card-header>
 
   <ion-card-content>
-    <ion-button color ="tertiary" ><ion-icon name="create-outline"></ion-icon></ion-button>
-    <ion-button color ="danger"><ion-icon name="trash-outline"></ion-icon></ion-button>
+    <ion-button color ="tertiary" (click)="onUpdateClick()"><ion-icon name="create-outline"></ion-icon></ion-button>
+    <ion-button color ="danger" (click)="onDeleteClick()"><ion-icon name="trash-outline"></ion-icon></ion-button>
   </ion-card-content>
 </ion-card>

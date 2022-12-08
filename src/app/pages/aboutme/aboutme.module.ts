@@ -7,13 +7,23 @@ import { IonicModule } from '@ionic/angular';
 import { AboutmePageRoutingModule } from './aboutme-routing.module';
 
 import { AboutmePage } from './aboutme.page';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { createTranslateLoader } from 'src/app/core/utils/translate';
+import { HttpClient } from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AboutmePageRoutingModule
+    AboutmePageRoutingModule,
+    TranslateModule.forChild({
+      loader:{ 
+        provide:TranslateLoader,
+        useFactory:(createTranslateLoader),
+        deps:[HttpClient]  
+      }
+    }),
   ],
   declarations: [AboutmePage]
 })
