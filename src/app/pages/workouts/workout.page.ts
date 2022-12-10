@@ -33,7 +33,7 @@ export class WorkoutPage implements OnInit {
     const modal = await this.modal.create({
         component:ExerciseFormComponent,
         componentProps:{
-          exercise:exercise
+          workout:exercise
         },
         cssClass:"modal-full-right-side"
     });

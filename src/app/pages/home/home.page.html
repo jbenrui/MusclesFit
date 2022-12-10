@@ -14,10 +14,10 @@
   
 </ion-content>
 -->
-<ion-menu contentId="main-content">
+<ion-menu contentId="main-content" [type]="screenType()=='BIG'?'push':'overlay'" >
   <ion-header>
     <ion-toolbar>
-      <ion-title>{{'home.title_menu | translate'}}</ion-title>
+      <ion-title>{{'home.title_menu' | translate}}</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content class="ion-padding">
@@ -25,9 +25,6 @@
     <ion-grid>
       <ion-row>
         <ion-col><ion-button [routerLink]="['../exercises']">{{'home.btn_workout' | translate}}</ion-button></ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col><ion-button [routerLink]="['../dailyworkout']">{{'home.btn_diary' | translate}}</ion-button></ion-col>
       </ion-row>
       <ion-row>
         <ion-col><ion-button [routerLink]="['../equipment']">{{'home.btn_equipment' | translate}}</ion-button></ion-col>
@@ -42,13 +39,14 @@
     
   </ion-content>
 </ion-menu>
+
 <div class="ion-page" id="main-content">
   <ion-header>
     <ion-toolbar>
       <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
-      <ion-title>{{'home.title | translate'}}</ion-title>
+      <ion-title>{{'home.title' | translate}}</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content class="ion-padding">
