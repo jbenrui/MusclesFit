@@ -13,6 +13,9 @@ import { CategoryItemComponent } from './components/category-item/category-item.
 import { CategoryFormComponent } from './components/category-form/category-form.component';
 import { EquipmentSelectableComponent } from './components/equipment-selectable/equipment-selectable.component';
 import { CategorySelectableComponent } from './components/category-selectable/category-selectable.component';
+import { DateSelectableComponent } from './components/date-selectable/date-selectable.component';
+import { ExerciseSelectableComponent } from './components/exercise-selectable/exercise-selectable.component';
+import { DiaryComponent } from './components/diary/diary.component';
 
 
 
@@ -46,7 +49,10 @@ import { CategorySelectableComponent } from './components/category-selectable/ca
     HttpClientModule,
     CategoryItemComponent,
     CategoryFormComponent,
-    CategorySelectableComponent
+    CategorySelectableComponent,
+    DateSelectableComponent,
+    ExerciseSelectableComponent,
+    DiaryComponent
   ],
   declarations:[
     ExerciseComponent,
@@ -56,7 +62,10 @@ import { CategorySelectableComponent } from './components/category-selectable/ca
     ExerciseFormComponent,
     CategoryItemComponent,
     CategoryFormComponent,
-    CategorySelectableComponent
+    CategorySelectableComponent,
+    DateSelectableComponent,
+    ExerciseSelectableComponent,
+    DiaryComponent
   ]
 
 })

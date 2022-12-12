@@ -17,7 +17,7 @@
 <ion-menu contentId="main-content" [type]="screenType()=='BIG'?'push':'overlay'" >
   <ion-header>
     <ion-toolbar>
-      <ion-title>{{'home.title_menu' | translate}}</ion-title>
+        <ion-title>{{'home.title_menu' | translate}}</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content class="ion-padding">
@@ -50,6 +50,9 @@
     </ion-toolbar>
   </ion-header>
   <ion-content class="ion-padding">
-    Tap the button in the toolbar to open the menu.
+
+    
+    <app-diary></app-diary>
+
   </ion-content>
 </div>

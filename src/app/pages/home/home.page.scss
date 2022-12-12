@@ -29,11 +29,21 @@ ion-content{
 }
 
 ion-button{
-  width: 100px;
+  width: 120px;
   --ion-color-primary: #11e28f;
 }
 
 .logo{
   width: 100px;
   height: 100px;
+}
+
+.toolbar-title {
+
+  display: block;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: visible;  //Preguntar
+  pointer-events: auto;
 }
