@@ -51,7 +51,7 @@ export class DateSelectableComponent implements OnInit {
     return this.selectedDateTime;
   }
 
-  onDateTimeChanged(event: { detail: { value: string; }; }, accordion:IonAccordionGroup){
+  onDateTimeChanged(event:any, accordion:IonAccordionGroup){
     this.selectedDateTime = event.detail.value;
     accordion.value=[''];
     this.propagateChage(this.selectedDateTime);

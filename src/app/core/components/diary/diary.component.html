@@ -12,16 +12,15 @@
           <ion-img src="{{getWorkoutImageById(diary?.id)}}"></ion-img>
         </ion-avatar>
         <ion-text id="WorkoutName">
-          Ejercicio:
-          {{getWorkoutNameById(diary?.id)}}
+          Ejercicio: {{getWorkoutNameById(diary?.id)}}
         </ion-text>
         
         <ion-text id="WorkoutRep">
-          Repeticiones: {{diary.repeticiones}}
+          Repeticiones: {{diary.reps}}
         </ion-text>
   
         <ion-text id="WorkoutWeight">
-          Peso: {{diary.peso}} Kg
+          Peso: {{diary.weight}} Kg
         </ion-text>  
       </ng-container>
       <ng-container *ngIf="screenType()=='SMALL'">
@@ -38,12 +37,12 @@
             </ion-col>
             <ion-col size="9" class="ion-align-self-center">
               <ion-text id="WorkoutRep">
-                Repeticiones: {{diary.repeticiones}}
+                Repeticiones: {{diary.reps}}
               </ion-text>
             </ion-col>
             <ion-col size="6"  class="ion-align-self-center">
               <ion-text id="WorkoutWeight">
-                Peso: {{diary.peso}} Kg
+                Peso: {{diary.weight}} Kg
               </ion-text>  
             </ion-col>
           </ion-row>
@@ -52,6 +51,6 @@
     </ion-item>
   </ion-card-content>
 
-  <ion-button  color="tertiary"><ion-icon name="create-outline"></ion-icon></ion-button>
-  <ion-button  color="danger"><ion-icon name="trash-outline"></ion-icon></ion-button>
+  <ion-button color="tertiary" (click)="onUpdateClick()"><ion-icon name="create-outline"></ion-icon></ion-button>
+  <ion-button color="danger" (click)="onDeleteClick()"><ion-icon name="trash-outline"></ion-icon></ion-button>
 </ion-card>

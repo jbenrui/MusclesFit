@@ -50,6 +50,9 @@
     </ion-toolbar>
   </ion-header>
   <ion-content class="ion-padding">
-      <app-diary *ngFor="let diary of (getDiaryList() | async)" [diary]="diary"></app-diary>
+      <app-diary *ngFor="let diary of (getDiaryList() | async)" [diary]="diary" (onUpdate)="onUpdateDiaryList($event)" (onDelete)="onDeleteDiaryList($event)"></app-diary>
+      <ion-fab vertical="bottom" horizontal="end"  slot="fixed" >
+        <ion-fab-button color="tertiary"(click)="onAddDiaryList()"><ion-icon style="zoom:2" name="add-outline"></ion-icon></ion-fab-button>
+      </ion-fab>
   </ion-content>
 </div>

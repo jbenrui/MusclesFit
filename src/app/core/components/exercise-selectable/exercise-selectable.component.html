@@ -1,3 +1,25 @@
-<p>
-  exercise-selectable works!
-</p>
+<ion-accordion-group [multiple]="true" #accordion>
+  <ion-accordion value="first">
+    <ion-item slot="header" color="light">
+      <ng-container *ngIf="selectedExercise!=null">
+        <ion-avatar class="equipment">
+          <ion-img *ngIf="!selectedExercise?.image" alt="Silhouette of a Workout" src="https://ionicframework.com/docs/ion-img/demos/avatar.svg" ></ion-img>
+          <ion-img *ngIf="selectedExercise?.image" alt="Equipment picture" [src]="selectedExercise?.image" ></ion-img>
+        </ion-avatar>
+        <ion-label>{{selectedExercise?.name}}</ion-label>
+      </ng-container>
+      <ion-label *ngIf="!selectedExercise">Selecciona un Equipamiento</ion-label>
+    </ion-item>
+    <div class="ion-padding" slot="content">
+      <ion-list>
+        <ion-item *ngFor="let workout of (getWorkout() | async)" button detail  (click)="onEquipmentClicked(workout, accordion)">
+          <ion-avatar class="workout">
+            <ion-img *ngIf="!workout.image" alt="Silhouette of a Workout" src="https://ionicframework.com/docs/ion-img/demos/avatar.svg" ></ion-img>
+            <ion-img *ngIf="workout.image" alt="Workout picture" [src]="workout.image"></ion-img>
+          </ion-avatar>
+          <ion-label>{{workout.name}}</ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-accordion>
+</ion-accordion-group>

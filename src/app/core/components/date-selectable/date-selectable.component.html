@@ -7,15 +7,13 @@
       <ion-label *ngIf="!selectedDateTime">Introduce una fecha</ion-label>
     </ion-item>
     <div class="ion-padding" slot="content">
-      <!--
       <ion-datetime #dateTime locale="es-ES" [value]="getTime()" (ionChange)="onDateTimeChanged($event, accordion)">
         <span slot="time-label">Tiempo</span> 
         <ion-buttons slot="buttons">
-          <ion-button color="danger" (click)="onCancel(dateTime)">Cancelar</ion-button>
+          <ion-button color="danger" (click)="onCancel(dateTime,accordion)">Cancelar</ion-button>
           <ion-button color="primary" (click)="onConfirm(dateTime)">Guardar</ion-button>
         </ion-buttons>
       </ion-datetime>
-      -->
     </div>
   </ion-accordion>
 </ion-accordion-group>

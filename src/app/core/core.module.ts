@@ -16,6 +16,7 @@ import { CategorySelectableComponent } from './components/category-selectable/ca
 import { DateSelectableComponent } from './components/date-selectable/date-selectable.component';
 import { ExerciseSelectableComponent } from './components/exercise-selectable/exercise-selectable.component';
 import { DiaryComponent } from './components/diary/diary.component';
+import { DiaryFormComponent } from './components/diary-form/diary-form.component';
 
 
 
@@ -52,7 +53,8 @@ import { DiaryComponent } from './components/diary/diary.component';
     CategorySelectableComponent,
     DateSelectableComponent,
     ExerciseSelectableComponent,
-    DiaryComponent
+    DiaryComponent,
+    DiaryFormComponent,
   ],
   declarations:[
     ExerciseComponent,
@@ -65,7 +67,8 @@ import { DiaryComponent } from './components/diary/diary.component';
     CategorySelectableComponent,
     DateSelectableComponent,
     ExerciseSelectableComponent,
-    DiaryComponent
+    DiaryComponent,
+    DiaryFormComponent,
   ]
 
 })

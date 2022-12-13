@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AlertController, ModalController } from '@ionic/angular';
 import { ExerciseFormComponent } from 'src/app/core/components/exercise-form/exercise-form.component';
 import { Workout } from 'src/app/core/model/workout';
+import { DiarySvcService } from 'src/app/core/services/diary-svc.service';
 import { WorkoutSVCService } from 'src/app/core/services/workout-svc.service';
 
 @Component({
@@ -13,6 +14,7 @@ export class WorkoutPage implements OnInit {
   public workout:Workout[] | undefined;
   constructor(
     private workoutSVC : WorkoutSVCService,
+    private DiarySVC:DiarySvcService,
     private modal:ModalController,
     private alert:AlertController,
   ) { }
@@ -87,8 +89,30 @@ async onDeleteAlert(workout:any){
   const { role } = await alert.onDidDismiss();
 
 }
+async onWorkoutExistsAlert(workout:any){
+  const alert = await this.alert.create({
+    header: 'Error',
+    message: 'No es posible borrar el ejercicio porque está asignado a un registro del Diario',
+    buttons: [
+      {
+        text: 'Cerrar',
+        role: 'close',
+        handler: () => {
+        },
+      },
+    ],
+  });
 
-  onDeleteWorkout(workout:Workout){
-    this.onDeleteAlert(workout);
+  await alert.present();
+
+  const { role } = await alert.onDidDismiss();
+}
+
+  onDeleteWorkout(workout:any){
+    if(!this.DiarySVC.getDiaryByIdWorkout(workout.id)){
+      this.onDeleteAlert(workout);
+    }else{
+      this.onWorkoutExistsAlert(workout);
+    }
   }
 }

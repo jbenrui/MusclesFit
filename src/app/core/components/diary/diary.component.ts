@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { diaryWorkout } from '../../model/diaryWorkout';
 import { CategoryWorkoutSVCService } from '../../services/category-workout-svc.service';
 import { ScreenSizeSVCService } from '../../services/screen-size-svc.service';
@@ -11,6 +11,8 @@ import { WorkoutSVCService } from '../../services/workout-svc.service';
 })
 export class DiaryComponent implements OnInit {
   @Input() diary!:diaryWorkout;
+  @Output() onUpdate = new EventEmitter;
+  @Output() onDelete = new EventEmitter;
   constructor(
 
     private workoutSVC:WorkoutSVCService,
@@ -64,6 +66,14 @@ export class DiaryComponent implements OnInit {
         return 'BIG';
       }
    }
+
+   onUpdateClick(){
+    this.onUpdate.emit(this.diary);
+  }
+
+  onDeleteClick(){
+    this.onDelete.emit(this.diary);
+  }
 
   ngOnInit() {}
 
