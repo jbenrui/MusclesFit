@@ -1,9 +1,7 @@
 export interface diaryWorkout{
     id:number,
     idWorkout:number,
-    idCategory:number,
-    idEquipament:number,
-    dateWorkout:String,
+    dateWorkout:string,
     peso?:number,
     repeticiones:number
 }

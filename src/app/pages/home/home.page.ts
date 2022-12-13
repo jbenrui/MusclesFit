@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DiarySvcService } from 'src/app/core/services/diary-svc.service';
 import { ScreenSizeSVCService } from 'src/app/core/services/screen-size-svc.service';
 
 @Component({
@@ -15,7 +16,10 @@ export class HomePage {
   TabletWidth:number = 600;
   MonitorWidth:number = 1000;
   
-  constructor(private ScreenSizeSVC:ScreenSizeSVCService ) {}
+  constructor(
+    private ScreenSizeSVC:ScreenSizeSVCService,    
+    private DiarySVC:DiarySvcService
+    ) {}
 
 
   getScreenSize(){
@@ -30,5 +34,9 @@ export class HomePage {
       }else{
         return 'BIG';
       }
+   }
+
+   getDiaryList(){
+    return this.DiarySVC.diaryList$
    }
 }

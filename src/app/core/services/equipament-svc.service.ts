@@ -88,7 +88,7 @@ export class EquipamentSVCService {
   private equipmentSubjetc:BehaviorSubject<Equipment[]> = new BehaviorSubject(this._equipment);
   public equipment$ = this.equipmentSubjetc.asObservable();
 
-  id:number = this._equipment.length+1;
+  id:number = (this._equipment.length)+1;
 
   constructor() { }
   getEquipmentById(id:number){

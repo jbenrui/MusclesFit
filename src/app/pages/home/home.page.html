@@ -50,9 +50,6 @@
     </ion-toolbar>
   </ion-header>
   <ion-content class="ion-padding">
-
-    
-    <app-diary></app-diary>
-
+      <app-diary *ngFor="let diary of (getDiaryList() | async)" [diary]="diary"></app-diary>
   </ion-content>
 </div>

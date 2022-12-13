@@ -123,11 +123,15 @@ export class WorkoutSVCService {
   private workoutSubjetc:BehaviorSubject<Workout[]> = new BehaviorSubject(this._workout);
   public workout$ = this.workoutSubjetc.asObservable();
 
-  id:number = this._workout.length+1;
+  id:number = (this._workout.length)+1;
   constructor() { }
 
   getWorkoutByCategory(id:number){ //Filter by Category
     return this._workout.find(w => w.id_category == id);
+  }
+
+  getWorkoutById(id:number){
+    return this._workout.find(w => w.id == id);
   }
 
   getWorkoutByEquipment(id:number){

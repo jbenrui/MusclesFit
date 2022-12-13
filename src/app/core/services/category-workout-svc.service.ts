@@ -36,7 +36,7 @@ export class CategoryWorkoutSVCService {
   private categorySubjetc:BehaviorSubject<CategoryWorkout[]> = new BehaviorSubject(this._category);
   public category$ = this.categorySubjetc.asObservable();
 
-  id:number = this._category.length+1;
+  id:number = (this._category.length)+1;
 
   constructor() { }
 
