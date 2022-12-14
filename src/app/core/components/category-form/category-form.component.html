@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title slot="end">Formulario de Categoria.</ion-title>
+    <ion-title slot="end">{{'formCategory.title' | translate}}</ion-title>
     <ion-buttons slot="start">
       <ion-button (click)="onDismiss()">X</ion-button>
     </ion-buttons>
@@ -10,12 +10,11 @@
     <form [formGroup]="form" (ngSubmit)="onSubmit()" (keyup.enter)="onSubmit()">
       <ion-item>
         <ion-label position="floating">
-          Nombre de la Categoria
+          {{'formCategory.lblcategory' | translate}}
         </ion-label>
-        <ion-input type="text" placeholder="Introduce el nombre de la Categoria" formControlName="nameCategory"></ion-input>
+        <ion-input type="text" placeholder="{{'formCategory.placeholderName' | translate}}" formControlName="nameCategory"></ion-input>
       </ion-item>
-      <ion-button [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modificar":"Añadir"}}</ion-button>
-      
+      <ion-button [disabled]="!form.valid" type="submit">{{mode=="Edit"?['formCategory.btn_update' | translate]:['formCategory.btn_add' | translate]}}</ion-button>
       <ion-img src="../../../../assets/ImagesForm/CategoryForm.png" ></ion-img>
     </form>
 </ion-content>

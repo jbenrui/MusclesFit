@@ -8,7 +8,7 @@
           </ion-avatar>
           <ion-label>{{selectedCategory?.nameCategory}}</ion-label>
         </ng-container>
-        <ion-label *ngIf="!selectedCategory">Selecciona una Categoria</ion-label>
+        <ion-label *ngIf="!selectedCategory">{{'category.lblselectabled' | translate}}</ion-label>
       </ion-item>
       <div class="ion-padding" slot="content">
         <ion-list>

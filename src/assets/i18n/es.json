@@ -18,8 +18,20 @@
     "formEquipment":{
         "tittle":"Formulario Regristro Equipaminto"
     },
+    "formCategory":{
+        "title":"Formulario Registro Categoria",
+        "lblcategory":"Nombre de la Categoria",
+        "placeholderName":"Introduce el nombre de la categoria"
+
+    },
     "general":{
-        "btn_cancel":"Cancelar"
+        "btn_cancel":"Cancelar",
+        "btn_add":"Añadir",
+        "btn_delete":"Borrar",
+        "btn_update":"Modificar",
+        "btn_close":"Cerrar",
+        "warning":"¿Estas seguro que quieres borrar el this?",
+        "exist":"No es posible borrar el elemento, ya que esta asignado a otro"
     },
     "aboutme":{
         "title":"Sobre Mí",
@@ -36,5 +48,12 @@
         "lowerbody":"Piernas",
         "armsbody":"Hombros y Brazos",
         "corebody":"Core"
+    },
+    "equipment":{
+        "title":"Lista de Equipamiento"
+    },
+    "category":{
+        "title":"Lista de Categorias",
+        "lblselectabled":"Selecciona una Categoria"
     }
 }

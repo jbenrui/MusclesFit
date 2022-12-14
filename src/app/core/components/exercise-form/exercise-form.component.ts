@@ -13,7 +13,6 @@ export class ExerciseFormComponent implements OnInit {
   form:FormGroup ;
   mode: "New" | "Edit" = "New"; 
 
-  
   @Input('workout') set workout(workout:Workout){
     if(workout){
       this.form.controls['id'].setValue(workout.id);

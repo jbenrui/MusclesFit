@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController, ModalController } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
+import { lastValueFrom } from 'rxjs';
 import { CategoryFormComponent } from 'src/app/core/components/category-form/category-form.component';
 import { CategoryWorkout } from 'src/app/core/model/categoryWorkout';
 import { CategoryWorkoutSVCService } from 'src/app/core/services/category-workout-svc.service';
@@ -17,6 +19,7 @@ export class CategoryPage implements OnInit {
     private workoutSVC : WorkoutSVCService,
     private modal:ModalController,
     private alert:AlertController,
+    private translate : TranslateService
   ) { }
 
   ngOnInit() {
@@ -58,17 +61,17 @@ onUpdateCategory(category:CategoryWorkout){
 
 async onDeleteAlert(category:any){
   const alert = await this.alert.create({
-    header: '¿Está seguro de que desear borrar la Categoria?',
+    header: await lastValueFrom(this.translate.get('general.warning')),
     buttons: [
       {
-        text: 'Cancelar',
+        text: await lastValueFrom(this.translate.get('general.btn_cancel')),
         role: 'cancel',
         handler: () => {
           console.log("Operacion cancelada");
         },
       },
       {
-        text: 'Borrar',
+        text: await lastValueFrom(this.translate.get('general.delete')),
         role: 'confirm',
         handler: () => {
             this.categorySVC.deleteCategorytById(category.id);
@@ -86,10 +89,10 @@ async onDeleteAlert(category:any){
 async onCategoryExistsAlert(category:any){
   const alert = await this.alert.create({
     header: 'Error',
-    message: 'No es posible borrar la categoria porque está asignada a un ejercicio',
+    message: await lastValueFrom(this.translate.get('general.exist')),
     buttons: [
       {
-        text: 'Cerrar',
+        text: await lastValueFrom(this.translate.get('general.btn_close')),
         role: 'close',
         handler: () => {
         },

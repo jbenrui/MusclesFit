@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { AlertController, ModalController } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
+import { lastValueFrom } from 'rxjs';
 import { DiaryFormComponent } from 'src/app/core/components/diary-form/diary-form.component';
 import { diaryWorkout } from 'src/app/core/model/diaryWorkout';
 import { DiarySvcService } from 'src/app/core/services/diary-svc.service';
@@ -24,6 +26,7 @@ export class HomePage {
     private DiarySVC:DiarySvcService,
     private modal:ModalController,
     private alert:AlertController,
+    private translate:TranslateService
     ) {}
 
 
@@ -49,7 +52,7 @@ export class HomePage {
     const modal = await this.modal.create({
         component:DiaryFormComponent,
         componentProps:{
-          diary:diary
+          diaryList:diary
         },
         cssClass:"modal-full-right-side"
     });
@@ -61,7 +64,7 @@ export class HomePage {
               this.DiarySVC.addDiaryList(result.data.DiaryList);
               break;
             case 'Edit':
-              this.DiarySVC.updateDiaryList(result.data.DiaryList);
+              this.DiarySVC.updateDiaryList(result.data.diary);
               break;
             default:
           }
@@ -79,17 +82,17 @@ export class HomePage {
 
 async onDeleteAlert(diary:any){
   const alert = await this.alert.create({
-    header: '¿Está seguro de que desear borrar el Ejercicio?',
+    header: await lastValueFrom(this.translate.get('general.warning')),
     buttons: [
       {
-        text: 'Cancelar',
+        text: await lastValueFrom(this.translate.get('general.btn_cancel')),
         role: 'cancel',
         handler: () => {
           console.log("Operacion cancelada");
         },
       },
       {
-        text: 'Borrar',
+        text: await lastValueFrom(this.translate.get('general.btn_delete')),
         role: 'confirm',
         handler: () => {
             this.DiarySVC.deleteDiaryListById(diary.id);

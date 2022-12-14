@@ -2,7 +2,7 @@
   <ion-accordion value="first">
     <ion-item slot="header" color="light">
       <ng-container *ngIf="selectedDateTime!=null">
-        <ion-label>{{getTime() | date:'short'}}</ion-label>
+        <ion-label>{{getTime() | date:'short':undefined:'es-es'}}</ion-label>
       </ng-container>
       <ion-label *ngIf="!selectedDateTime">Introduce una fecha</ion-label>
     </ion-item>

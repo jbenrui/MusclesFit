@@ -5,9 +5,11 @@
         "btn_equipment":"Equipment",
         "btn_category":"Category",
         "btn_aboutme":"About Me",
+        "btn_close":"Cerrar",
         "title":"Diary Fit",
-        "title_menu":"MusclesFit Menu"
-    },
+        "title_menu":"MusclesFit Menu",
+        "warning":"¿Are you sure that you want delete this?",
+        "exist":"Its not possible to delete the element, it assing to other element"},
     "form":{
         "etq_name":"Equipment's Name"
     },
@@ -18,8 +20,17 @@
     "formEquipment":{
         "tittle":"Register Equipment Form"
     },
+    "formCategory":{
+        "title":"Register Category Form",
+        "lblcategory":"Name Category",
+        "placeholderName":"Introduce the Category"
+
+    },
     "general":{
-        "btn_cancel":"Cancel"
+        "btn_cancel":"Cancel",
+        "btn_add":"Add",
+        "btn_delete":"Delete",
+        "btn_update":"Update"
     },
     "aboutme":{
         "title":"About Me",
@@ -36,5 +47,12 @@
         "lowerbody":"Legs",
         "armsbody":"Shoulder and Arms",
         "corebody":"Core"
+    },
+    "equipment":{
+        "title":"Equipment list"
+    },
+    "category":{
+        "title":"Category list",
+        "lblselectabled":"Select one Category"
     }
 }

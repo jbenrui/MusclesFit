@@ -1,13 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, forwardRef, OnInit } from '@angular/core';
+import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import { IonAccordionGroup } from '@ionic/angular';
 import { Observable } from 'rxjs';
 import { Workout } from '../../model/workout';
 import { WorkoutSVCService } from '../../services/workout-svc.service';
 
+
+export const USER_PROFILE_VALUE_ACCESSOR: any = {
+  provide: NG_VALUE_ACCESSOR,
+  useExisting: forwardRef(() => ExerciseSelectableComponent),
+  multi: true
+};
+
 @Component({
   selector: 'app-exercise-selectable',
   templateUrl: './exercise-selectable.component.html',
   styleUrls: ['./exercise-selectable.component.scss'],
+  providers:[USER_PROFILE_VALUE_ACCESSOR]
+  
 })
 export class ExerciseSelectableComponent implements OnInit {
 

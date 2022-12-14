@@ -1,21 +1,17 @@
 <ion-header>
   <ion-toolbar>
-    <ion-icon class="iconLogo" slot="end" name="american-football-outline"></ion-icon>
+    <ion-title slot="end">{{'equipment.title' | translate}}</ion-title>
     <ion-buttons>
-      <ion-back-button slot="start" defaultHref="/">Return to Home</ion-back-button>
+      <ion-back-button slot="start" defaultHref="/"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-item>
-      <ion-label>Foto</ion-label>
-      <ion-label class="etq-name">Nombre</ion-label>
-    </ion-item>
     <app-equipment-item *ngFor="let equipment of getEquipment() | async" [equipment]="equipment" (onUpdate)="onUpdateEquipment($event)" (onDelete)="onDeleteEquipment($event)"></app-equipment-item>
   </ion-list>
   <ion-fab vertical="bottom" horizontal="end"  slot="fixed" >
-    <ion-fab-button (click)="onAddEquipment()"><ion-icon style="zoom:2" name="add-outline"></ion-icon></ion-fab-button>
+    <ion-fab-button color="tertiary" (click)="onAddEquipment()"><ion-icon style="zoom:2" name="add-outline"></ion-icon></ion-fab-button>
   </ion-fab>
 </ion-content>

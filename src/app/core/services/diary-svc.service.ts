@@ -35,13 +35,13 @@ export class DiarySvcService {
     this._diaryList.push(diary);
   }
 
-  updateDiaryList(diaryList:diaryWorkout){
-    var _diary = this._diaryList.find(e=>e.id == e.id);
+  updateDiaryList(diary:diaryWorkout){
+    var _diary = this._diaryList.find(d=>d.id == d.id);
     if (_diary){
-      _diary.idWorkout = diaryList.idWorkout
-      _diary.dateWorkout = diaryList.dateWorkout
-      _diary.weight = diaryList.weight
-      _diary.reps = diaryList.reps
+      _diary.idWorkout = diary.idWorkout
+      _diary.dateWorkout = diary.dateWorkout
+      _diary.weight = diary.weight
+      _diary.reps = diary.reps
     }
   }
 

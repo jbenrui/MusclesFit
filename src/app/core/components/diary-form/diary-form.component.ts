@@ -14,13 +14,13 @@ export class DiaryFormComponent implements OnInit {
   mode: "New" | "Edit" = "New"; 
 
   
-  @Input('diary') set workout(diary:diaryWorkout){
-    if(diary){
-      this.form.controls['id'].setValue(diary.id);
-      this.form.controls['idWorkout'].setValue(diary.idWorkout);
-      this.form.controls['dateWorkout'].setValue(diary.dateWorkout);
-      this.form.controls['weight'].setValue(diary.weight);
-      this.form.controls['reps'].setValue(diary.reps);
+  @Input('diaryList') set diaryList(diaryList:diaryWorkout){
+    if(diaryList){
+      this.form.controls['id'].setValue(diaryList.id);
+      this.form.controls['idWorkout'].setValue(diaryList.idWorkout);
+      this.form.controls['dateWorkout'].setValue(diaryList.dateWorkout);
+      this.form.controls['weight'].setValue(diaryList.weight);
+      this.form.controls['reps'].setValue(diaryList.reps);
       
       this.mode = "Edit";
       

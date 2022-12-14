@@ -1,5 +1,5 @@
-import {NgModule} from '@angular/core'
-import { CommonModule } from '@angular/common';
+import {LOCALE_ID, NgModule} from '@angular/core'
+import { CommonModule, registerLocaleData } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { ExerciseComponent } from './components/exercise/exercise.component';
@@ -17,8 +17,11 @@ import { DateSelectableComponent } from './components/date-selectable/date-selec
 import { ExerciseSelectableComponent } from './components/exercise-selectable/exercise-selectable.component';
 import { DiaryComponent } from './components/diary/diary.component';
 import { DiaryFormComponent } from './components/diary-form/diary-form.component';
+import es  from '@angular/common/locales/es';
+import en  from '@angular/common/locales/en';
 
-
+registerLocaleData(en);
+registerLocaleData(es);
 
 @NgModule({
   imports: 
@@ -35,6 +38,12 @@ import { DiaryFormComponent } from './components/diary-form/diary-form.component
         deps:[HttpClient]  
       }
     }),
+  ],
+  providers:[
+    {
+      provide: LOCALE_ID,
+     useValue: 'es'
+    }
   ],
   exports:
   [
