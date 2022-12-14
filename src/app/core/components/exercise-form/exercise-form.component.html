@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title slot="end">Formulario de Ejercicios.</ion-title>
+    <ion-title slot="end">{{'formWorkout.title' | translate}}</ion-title>
     <ion-buttons slot="start">
       <ion-button (click)="onDismiss()">X</ion-button>
     </ion-buttons>
@@ -10,12 +10,12 @@
     <form [formGroup]="form" (ngSubmit)="onSubmit()" (keyup.enter)="onSubmit()">
       <ion-item>
         <ion-label position="floating">
-          Nombre
+          {{'formWorkout.lblName' | translate}}
         </ion-label>
-        <ion-input type="text" placeholder="Introduce el nombre del Ejercicio" formControlName="name"></ion-input>
+        <ion-input type="text" placeholder="{{'formWorkout.placeholderName' | translate}}" formControlName="name"></ion-input>
       </ion-item>
       <app-equipment-selectable formControlName="id_equipment"></app-equipment-selectable>
       <app-category-selectable formControlName="id_category"></app-category-selectable>
-      <ion-button [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modificar":"Añadir"}}</ion-button>
+      <ion-button [disabled]="!form.valid" type="submit">{{mode=="Edit"?['formGeneral.btn_update' | translate]:['formGeneral.btn_add' | translate]}}</ion-button>
     </form>
 </ion-content>

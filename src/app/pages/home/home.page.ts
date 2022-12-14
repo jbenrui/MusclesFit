@@ -61,7 +61,7 @@ export class HomePage {
         if(result && result.data){
           switch(result.data.mode){
             case 'New':
-              this.DiarySVC.addDiaryList(result.data.DiaryList);
+              this.DiarySVC.addDiaryList(result.data.diary);
               break;
             case 'Edit':
               this.DiarySVC.updateDiaryList(result.data.diary);

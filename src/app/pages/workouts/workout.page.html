@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-icon class="iconLogo" slot="end" name="american-football-outline"></ion-icon>
+    <ion-title slot="end">{{'workout.title' | translate}}</ion-title>
     <ion-buttons>
       <ion-back-button slot="start" defaultHref="/">Return to Home</ion-back-button>
     </ion-buttons>
@@ -17,6 +17,6 @@
     </ion-row>
   </ion-grid>
   <ion-fab vertical="bottom" horizontal="end"  slot="fixed" >
-    <ion-fab-button (click)="onAddWorkout()"><ion-icon style="zoom:2" name="add-outline"></ion-icon></ion-fab-button>
+    <ion-fab-button color="tertiary" (click)="onAddWorkout()"><ion-icon style="zoom:2" name="add-outline"></ion-icon></ion-fab-button>
   </ion-fab>
 </ion-content>

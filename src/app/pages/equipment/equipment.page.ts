@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController, ModalController } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
+import { lastValueFrom } from 'rxjs';
 import { EquipmentFormComponent } from 'src/app/core/components/equipment-form/equipment-form.component';
 import { Equipment } from 'src/app/core/model/equipment';
 import { EquipamentSVCService } from 'src/app/core/services/equipament-svc.service';
@@ -17,6 +19,7 @@ export class EquipmentPage implements OnInit {
     private workoutSVC : WorkoutSVCService,
     private modal:ModalController,
     private alert:AlertController,
+    private translate : TranslateService
   ) { }
 
   ngOnInit() {
@@ -59,17 +62,17 @@ export class EquipmentPage implements OnInit {
   
   async onDeleteAlert(equipment:any){
     const alert = await this.alert.create({
-      header: '¿Está seguro de que desear borrar el equipamiento?',
+      header: await lastValueFrom(this.translate.get('general.warning')),
       buttons: [
         {
-          text: 'Cancelar',
+          text: await lastValueFrom(this.translate.get('general.btn_cancel')),
           role: 'cancel',
           handler: () => {
             console.log("Operacion cancelada");
           },
         },
         {
-          text: 'Borrar',
+          text: await lastValueFrom(this.translate.get('general.btn_delete')),
           role: 'confirm',
           handler: () => {
               this.equipmentSVC.deleteEquipmentById(equipment.id);
@@ -87,10 +90,10 @@ export class EquipmentPage implements OnInit {
   async onEquipmentExistsAlert(equipment:any){
     const alert = await this.alert.create({
       header: 'Error',
-      message: 'No es posible borrar el equipamiento porque está asignado a un ejercicio',
+      message: await lastValueFrom(this.translate.get('general.exist')),
       buttons: [
         {
-          text: 'Cerrar',
+          text: await lastValueFrom(this.translate.get('general.btn_close')),
           role: 'close',
           handler: () => {
           },

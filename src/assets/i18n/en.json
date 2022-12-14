@@ -5,11 +5,9 @@
         "btn_equipment":"Equipment",
         "btn_category":"Category",
         "btn_aboutme":"About Me",
-        "btn_close":"Cerrar",
         "title":"Diary Fit",
-        "title_menu":"MusclesFit Menu",
-        "warning":"¿Are you sure that you want delete this?",
-        "exist":"Its not possible to delete the element, it assing to other element"},
+        "title_menu":"MusclesFit Menu"
+    },
     "form":{
         "etq_name":"Equipment's Name"
     },
@@ -18,19 +16,36 @@
         "btn_update":"Update"
     },
     "formEquipment":{
-        "tittle":"Register Equipment Form"
+        "title":"Equipment Form",
+        "placeholderName":"Introduce the Equipment Name",
+        "lblselectabled":"Select one Equipment"
     },
     "formCategory":{
-        "title":"Register Category Form",
+        "title":"Category Form",
         "lblcategory":"Name Category",
-        "placeholderName":"Introduce the Category"
+        "placeholderName":"Introduce the Category Name"
 
+    },
+    "formDiary":{
+        "title":"Register Form",
+        "placeholderReps":"Introduce the number of Reps",
+        "placeholderWeight":"Introduce the weight"
+    },
+    "formWorkout":{
+        "title":"Workout Form",
+        "placeholderName":"Introduce the Workout Name",
+        "lblName":"Name"
+        
     },
     "general":{
         "btn_cancel":"Cancel",
         "btn_add":"Add",
         "btn_delete":"Delete",
-        "btn_update":"Update"
+        "btn_update":"Update",
+        "btn_guardar":"Save",
+        "btn_close":"Close",
+        "warning":"¿Are you sure that you want delete this?",
+        "exist":"Its not possible to delete the element, it assing to other element"
     },
     "aboutme":{
         "title":"About Me",
@@ -39,7 +54,10 @@
         "tip":"How many time do you train an Muscular Group?",
         "one_week":"Once a week",
         "one_or_twoweek":"Once or Twice a week", 
-        "two_or_threeWeek":"Two or Three times a week"      
+        "two_or_threeWeek":"Two or Three times a week",   
+        "contactme":"Contact Me",  
+        "hobbies":"My Hobbies",
+        "textHobbie":"Im just a guy that I like train and feels de pump on my muscles. So I spend a lot of time to learn about the muscles and training, and I realized when you more progress its when you count what you do.  I recommend many books to you, but the book that changed me is the Guide of bodybuilding movements by Frédéric Delavier"
     },
     "groupMuscular":{
         "upperbodyfront":"Chest",
@@ -54,5 +72,18 @@
     "category":{
         "title":"Category list",
         "lblselectabled":"Select one Category"
+    },
+    "workout":{
+        "title":"Workout List",
+        "lblselectabled":"Select one Workout"
+    },
+    "date":{
+        "lbltime":"Time",
+        "lblselectabled":"Select one Date"
+    },
+    "diary":{
+        "lblWorkout":"Workout",
+        "lblReps":"Reps",
+        "lblWeight":"Weight"
     }
 }

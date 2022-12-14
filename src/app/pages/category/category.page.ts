@@ -71,7 +71,7 @@ async onDeleteAlert(category:any){
         },
       },
       {
-        text: await lastValueFrom(this.translate.get('general.delete')),
+        text: await lastValueFrom(this.translate.get('general.btn_delete')),
         role: 'confirm',
         handler: () => {
             this.categorySVC.deleteCategorytById(category.id);

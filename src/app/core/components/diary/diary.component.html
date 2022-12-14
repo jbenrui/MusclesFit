@@ -12,15 +12,15 @@
           <ion-img src="{{getWorkoutImageById(diary?.id)}}"></ion-img>
         </ion-avatar>
         <ion-text id="WorkoutName">
-          Ejercicio: {{getWorkoutNameById(diary?.id)}}
+          {{'diary.lblWorkout' | translate}}: {{getWorkoutNameById(diary?.id)}}
         </ion-text>
         
         <ion-text id="WorkoutRep">
-          Repeticiones: {{diary.reps}}
+          {{'diary.lblReps' | translate }}: {{diary.reps}}
         </ion-text>
   
         <ion-text id="WorkoutWeight">
-          Peso: {{diary.weight}} Kg
+          {{'diary.lblWeight' | translate}}: {{diary.weight}} Kg
         </ion-text>  
       </ng-container>
       <ng-container *ngIf="screenType()=='SMALL'">
@@ -32,17 +32,17 @@
             </ion-col>
             <ion-col size="12" class="ion-align-self-center">
               <ion-text id="WorkoutName">
-                Ejercicio: {{getWorkoutNameById(diary?.id)}}
+                {{'diary.lblWorkout' | translate}}: {{getWorkoutNameById(diary?.id)}}
               </ion-text>
             </ion-col>
             <ion-col size="9" class="ion-align-self-center">
               <ion-text id="WorkoutRep">
-                Repeticiones: {{diary.reps}}
+                {{'diary.lblReps' | translate }}: {{diary.reps}}
               </ion-text>
             </ion-col>
             <ion-col size="6"  class="ion-align-self-center">
               <ion-text id="WorkoutWeight">
-                Peso: {{diary.weight}} Kg
+                {{'diary.lblWeight' | translate}}: {{diary.weight}} Kg
               </ion-text>  
             </ion-col>
           </ion-row>

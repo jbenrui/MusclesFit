@@ -34,8 +34,8 @@ export class DiaryFormComponent implements OnInit {
       id:[null],
       idWorkout:['',[Validators.required]],
       dateWorkout:['',[Validators.required]],
-      weight:['',[Validators.required]],
-      reps:['']
+      weight:[''],
+      reps:['',[Validators.required]]
     });
   }
 

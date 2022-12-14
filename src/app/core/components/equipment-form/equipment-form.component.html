@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title slot="end">Formulario de Equipamiento.</ion-title>
+    <ion-title slot="end">{{'formEquipment.title' | translate}}</ion-title>
     <ion-buttons slot="start">
       <ion-button (click)="onDismiss()">X</ion-button>
     </ion-buttons>
@@ -10,12 +10,12 @@
     <form [formGroup]="form" (ngSubmit)="onSubmit()" (keyup.enter)="onSubmit()">
       <ion-item>
         <ion-label position="floating">
-          Nombre
+          {{'form.etq_name' | translate}}
         </ion-label>
-        <ion-input type="text" placeholder="Introduce el nombre del Equipamiento" formControlName="name_equipment"></ion-input>
+        <ion-input type="text" placeholder="{{'formEquipment.placeholderName' | translate}}" formControlName="name_equipment"></ion-input>
       </ion-item>
       
-      <ion-button [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modificar":"Añadir"}}</ion-button>
+      <ion-button [disabled]="!form.valid" type="submit">{{mode=="Edit"?['formGeneral.btn_update' | translate]:['formGeneral.btn_add' | translate]}}</ion-button>
 
       <ion-img src="../../../../assets/ImagesForm/EquipmentForm2.png" ></ion-img>
     </form>

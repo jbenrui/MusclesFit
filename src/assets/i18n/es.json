@@ -16,21 +16,37 @@
         "btn_update":"Modificar"
     },
     "formEquipment":{
-        "tittle":"Formulario Regristro Equipaminto"
+        "title":"Alta Equipamiento",
+        "placeholderName":"Introduce el nombre del equipamiento",
+        "lblselectabled":"Selecciona una Equipamiento"
     },
     "formCategory":{
-        "title":"Formulario Registro Categoria",
+        "title":"Alta Categoria",
         "lblcategory":"Nombre de la Categoria",
         "placeholderName":"Introduce el nombre de la categoria"
 
     },
+    "formDiary":{
+        "title":"Alta de Registro",
+        "placeholderReps":"Introduce el numero de reps",
+        "placeholderWeight":"Introduce el peso"
+        
+    },
+    "formWorkout":{
+        "title":"Alta Ejercicio",
+        "placeholderName":"Introduce el nombre del Ejercicio",
+        "lblName":"Nombre"
+        
+    },
+    
     "general":{
         "btn_cancel":"Cancelar",
         "btn_add":"Añadir",
         "btn_delete":"Borrar",
         "btn_update":"Modificar",
         "btn_close":"Cerrar",
-        "warning":"¿Estas seguro que quieres borrar el this?",
+        "btn_guardar":"Guardar",
+        "warning":"¿Estas seguro que quieres borrar el esto?",
         "exist":"No es posible borrar el elemento, ya que esta asignado a otro"
     },
     "aboutme":{
@@ -40,7 +56,10 @@
         "tip":"¿Cuantas Veces Entrenar un Grupo Muscular?",
         "one_week":"Una vez en semana",
         "one_or_twoweek":"Una o Dos veces en semana",
-        "two_or_threeWeek":"Dos o Tres veces en semana"    
+        "two_or_threeWeek":"Dos o Tres veces en semana",   
+        "contactme":"Contáctame",
+        "hobbies":"My Hobbies",
+        "textHobbie":"Solo soy un chico al que le gusta entrenar y sentir la bomba en mis músculos. Así que paso mucho tiempo aprendiendo sobre los músculos y el entrenamiento, y me di cuenta de que el mayor progreso es cuando cuentas lo que haces. Te recomiendo muchos libros, pero el libro que me cambio es la Guía de movimiento de fisicoculturismo de Frédéric Delavier." 
     },
     "groupMuscular":{
         "upperbodyfront":"Pecho",
@@ -55,5 +74,18 @@
     "category":{
         "title":"Lista de Categorias",
         "lblselectabled":"Selecciona una Categoria"
+    },
+    "workout":{
+        "title":"Lista de Ejercicios",
+        "lblselectabled":"Selecciona un Ejercicio"
+    },
+    "date":{
+        "lbltime":"Tiempo",
+        "lblselectabled":"Selecciona una fecha"
+    },
+    "diary":{
+        "lblWorkout":"Ejercicio",
+        "lblReps":"Repeticiones",
+        "lblWeight":"Peso"
     }
 }

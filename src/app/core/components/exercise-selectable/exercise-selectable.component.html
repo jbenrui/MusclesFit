@@ -8,7 +8,7 @@
         </ion-avatar>
         <ion-label>{{selectedExercise?.name}}</ion-label>
       </ng-container>
-      <ion-label *ngIf="!selectedExercise">Selecciona un Ejercicio</ion-label>
+      <ion-label *ngIf="!selectedExercise">{{'workout.lblselectabled'|translate}}</ion-label>
     </ion-item>
     <div class="ion-padding" slot="content">
       <ion-list>

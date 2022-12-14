@@ -8,6 +8,9 @@ import { WorkoutPageRoutingModule } from './workout-routing.module';
 
 import { WorkoutPage } from './workout.page';
 import { CoreModule } from 'src/app/core/core.module';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { createTranslateLoader } from 'src/app/core/utils/translate';
+import { HttpClient } from '@angular/common/http';
 
 
 @NgModule({
@@ -16,7 +19,14 @@ import { CoreModule } from 'src/app/core/core.module';
     FormsModule,
     IonicModule,
     CoreModule,
-    WorkoutPageRoutingModule
+    WorkoutPageRoutingModule,
+    TranslateModule.forChild({
+      loader:{ 
+        provide:TranslateLoader,
+        useFactory:(createTranslateLoader),
+        deps:[HttpClient]  
+      }
+    }),
   ],
   declarations: [WorkoutPage]
 })

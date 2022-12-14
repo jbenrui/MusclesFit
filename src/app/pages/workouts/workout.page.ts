@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController, ModalController } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
+import { lastValueFrom } from 'rxjs';
 import { ExerciseFormComponent } from 'src/app/core/components/exercise-form/exercise-form.component';
 import { Workout } from 'src/app/core/model/workout';
 import { DiarySvcService } from 'src/app/core/services/diary-svc.service';
@@ -17,6 +19,7 @@ export class WorkoutPage implements OnInit {
     private DiarySVC:DiarySvcService,
     private modal:ModalController,
     private alert:AlertController,
+    private translate : TranslateService
   ) { }
 
   ngOnInit() {
@@ -65,17 +68,17 @@ export class WorkoutPage implements OnInit {
 
 async onDeleteAlert(workout:any){
   const alert = await this.alert.create({
-    header: '¿Está seguro de que desear borrar el Ejercicio?',
+    header: await lastValueFrom(this.translate.get('general.warning')),
     buttons: [
       {
-        text: 'Cancelar',
+        text: await lastValueFrom(this.translate.get('general.btn_cancel')),
         role: 'cancel',
         handler: () => {
           console.log("Operacion cancelada");
         },
       },
       {
-        text: 'Borrar',
+        text: await lastValueFrom(this.translate.get('general.btn_delete')),
         role: 'confirm',
         handler: () => {
             this.workoutSVC.deleteWorkoutById(workout.id);
@@ -92,10 +95,10 @@ async onDeleteAlert(workout:any){
 async onWorkoutExistsAlert(workout:any){
   const alert = await this.alert.create({
     header: 'Error',
-    message: 'No es posible borrar el ejercicio porque está asignado a un registro del Diario',
+    message: await lastValueFrom(this.translate.get('general.exist')),
     buttons: [
       {
-        text: 'Cerrar',
+        text: await lastValueFrom(this.translate.get('general.btn_close')),
         role: 'close',
         handler: () => {
         },

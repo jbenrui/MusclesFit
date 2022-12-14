@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title slot="end">Formulario de Ejercicios.</ion-title>
+    <ion-title slot="end">{{'formDiary.title' | translate}}</ion-title>
     <ion-buttons slot="start">
       <ion-button (click)="onDismiss()">X</ion-button>
     </ion-buttons>
@@ -12,14 +12,14 @@
       <app-exercise-selectable formControlName="idWorkout"></app-exercise-selectable>
       <ion-item>
         <ion-label position="floating">
-          Repeticiones
+          {{'diary.lblReps' | translate }}
         </ion-label>
-        <ion-input type="text" placeholder="Introduce el nombre del Ejercicio" formControlName="reps"></ion-input>
+        <ion-input type="number" placeholder="{{'formDiary.placeholderReps' | translate}}" formControlName="reps"></ion-input>
         <ion-label position="floating">
-          Peso
+          {{'diary.lblWeight' | translate}}
         </ion-label>
-        <ion-input type="text" placeholder="Introduce el nombre del Ejercicio" formControlName="weight"></ion-input>
+        <ion-input type="number" placeholder="{{'formDiary.placeholderWeight' | translate}}" formControlName="weight"></ion-input>
       </ion-item>
-      <ion-button [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modificar":"Añadir"}}</ion-button>
+      <ion-button [disabled]="!form.valid" type="submit">{{mode=="Edit"?['formGeneral.btn_update' | translate]:['formGeneral.btn_add' | translate]}}</ion-button>
     </form>
 </ion-content>
