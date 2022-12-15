@@ -16,3 +16,4 @@ el propio usuario pueda añadir imagenes de sus ejercicios y enriquezca la aplic
 ### 1º: Estructura de la aplicacion.
 La aplicacion consta de 4 modelos. El modelo principal "el diario", el modelo de ejercicios, el modelo de equipamiento y el modelo de las categorias.
 
+![Estructura](../readmeImages/ModelView.png)
