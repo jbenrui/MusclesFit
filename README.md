@@ -17,3 +17,41 @@ el propio usuario pueda añadir imagenes de sus ejercicios y enriquezca la aplic
 La aplicacion consta de 4 modelos. El modelo principal "el diario", el modelo de ejercicios, el modelo de equipamiento y el modelo de las categorias.
 
 ![Estructura](readmeImages/ModelView.png)
+
+#### Estructura de paginas, componentes , servicios y Core.:
+![Paginas](readmeImages/Pages.png)
+![Components](readmeImages/Components.png)
+![MisServicios](readmeImages/MisServicios.png)
+![CoreModule](readmeImages/CoreModule.png)
+
+#### Servicio que cree para obtener el tamaño de la pantalla.
+![ServicioImplementado](readmeImages/ServicioImplementado.png)
+
+
+### 2º: Pagina Principal
+La pagina principal tiene distintas vistas segun el disposito en el que estes ademas de implementar el diario de ejercicios.
+
+![PhoneScreen](readmeImages/HomePhone.png)
+![BigScreen](readmeImages/HomeScreenBig.png)
+
+### 3º: Pagina Equipment
+Esta pagina muestra un listado del equipo de gimnasio basico.
+![Equipment](readmeImages/Equipment.png)
+
+### 4º: Pagina Category
+Esta pagina muestra las categorias en las que se clasificaran los ejercicios.
+![Category](readmeImages/Category.png)
+
+### 5º: Pagina Workout:
+Esta pagina muestra los ejercicios que el usuario puede añadir al registro.
+![Workout](readmeImages/Workout.png)
+
+### 6º: Pagina About Me:
+Esta pagina muestra informacion sobre el desarrollador (yo), Ademas gracias al servicio que cree para obtener el tamaño de la pantalla, he creado usando un ngContainer un formato para cada pantalla dependiendo de si estas en tablet, ordenador o movil.
+![AboutMePc](readmeImages/AboutMePc.png)
+![AboutMeTablet](readmeImages/AboutMeTablet.png)
+![AboutMePhone](readmeImages/AboutMePhone.png)
+
+
+
+
