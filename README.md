@@ -52,6 +52,7 @@ Esta pagina muestra informacion sobre el desarrollador (yo), Ademas gracias al s
 ![AboutMeTablet](readmeImages/AboutMeTablet.png)
 ![AboutMePhone](readmeImages/AboutMePhone.png)
 
-
+### 7º: Side Menu:
+Para el side Menu tambien use el servicio (ScreenSize), para dependiendo el tipo de pantalla se desplegara de manera push o overlay
 
 
