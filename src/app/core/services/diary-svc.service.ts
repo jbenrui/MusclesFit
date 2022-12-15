@@ -36,13 +36,14 @@ export class DiarySvcService {
     this._diaryList.push(diary);
   }
 
-  updateDiaryList(diary:diaryWorkout){
-    var _diary = this._diaryList.find(d=>d.id == d.id);
+  updateDiaryList(diaryItem:diaryWorkout){
+    console.log(diaryItem)
+    var _diary = this._diaryList.find(diary=>diary.id == diaryItem.id);
     if (_diary){
-      _diary.idWorkout = diary.idWorkout
-      _diary.dateWorkout = diary.dateWorkout
-      _diary.weight = diary.weight
-      _diary.reps = diary.reps
+      _diary.idWorkout = diaryItem.idWorkout
+      _diary.dateWorkout = diaryItem.dateWorkout
+      _diary.weight = diaryItem.weight
+      _diary.reps = diaryItem.reps
     }
   }
 

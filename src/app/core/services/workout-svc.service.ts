@@ -129,7 +129,7 @@ export class WorkoutSVCService {
   }
 
   updateWorkout(exerciseItem:Workout){
-    var _exercise = this._workout.find(exercise=>exercise.id == exercise.id);
+    var _exercise = this._workout.find(exercise=>exercise.id == exerciseItem.id);
     if (_exercise){
       _exercise.name = exerciseItem.name
       _exercise.id_category = exerciseItem.id_category
