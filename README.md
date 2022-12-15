@@ -54,5 +54,6 @@ Esta pagina muestra informacion sobre el desarrollador (yo), Ademas gracias al s
 
 ### 7º: Side Menu:
 Para el side Menu tambien use el servicio (ScreenSize), para dependiendo el tipo de pantalla se desplegara de manera push o overlay
-
+![MenuPush](readmeImages/MenuPush.png)
+![MenuOverlay](readmeImages/MenuOverlay.png)
 
