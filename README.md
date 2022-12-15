@@ -1,5 +1,5 @@
 # MusclesFit
-
+![Logo](readmeImages/logoMusclesFit.png)
 ## --> Introduccion <--
 
 Esta Aplicación esta dedicada a los usuarios que suelen hacer actividad fisica. A lo largo de mi tiempo entrenando me he dado cuenta que cuando mas comienzas a avanzar
