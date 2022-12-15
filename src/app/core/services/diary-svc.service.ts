@@ -1,18 +1,19 @@
 import { Injectable } from '@angular/core';
+import * as moment from 'moment';
 import { BehaviorSubject } from 'rxjs';
 import { diaryWorkout } from '../model/diaryWorkout';
-import { Workout } from '../model/workout';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DiarySvcService {
+  private moment:any = moment;
   private _diaryList: diaryWorkout[] = [
 
     {
       id:1,
       idWorkout:1,
-      dateWorkout:"12/12/2022",
+      dateWorkout:this.moment().toISOString(),
       weight:80,
       reps:8
     }

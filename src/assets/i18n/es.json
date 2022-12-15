@@ -52,14 +52,14 @@
     "aboutme":{
         "title":"Sobre Mí",
         "card_content":"Esta aplicacion ha sido desarrollada con el fin de que el usuario pueda llevar un registro de sus avances en el gimnasio y asi poder preparar un plan de entrenamiento en base a tu pogreso.",
-        "card_subtitle":"Alumno de 2º DAM",
+        "card_subtitle":"Alumno de 2º DAM | ADD & HLC | CPIFP Malaga Tech Park",
         "tip":"¿Cuantas Veces Entrenar un Grupo Muscular?",
         "one_week":"Una vez en semana",
         "one_or_twoweek":"Una o Dos veces en semana",
         "two_or_threeWeek":"Dos o Tres veces en semana",   
         "contactme":"Contáctame",
         "hobbies":"My Hobbies",
-        "textHobbie":"Solo soy un chico al que le gusta entrenar y sentir la bomba en mis músculos. Así que paso mucho tiempo aprendiendo sobre los músculos y el entrenamiento, y me di cuenta de que el mayor progreso es cuando cuentas lo que haces. Te recomiendo muchos libros, pero el libro que me cambio es la Guía de movimiento de fisicoculturismo de Frédéric Delavier." 
+        "textHobbie":"Solo soy un chico al que le gusta entrenar y sentir la bomba en mis músculos. Así que paso mucho tiempo aprendiendo sobre los músculos y el entrenamiento, y me di cuenta de que el mayor progreso es cuando cuentas lo que haces." 
     },
     "groupMuscular":{
         "upperbodyfront":"Pecho",

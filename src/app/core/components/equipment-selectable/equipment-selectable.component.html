@@ -3,10 +3,10 @@
     <ion-item slot="header" color="light">
       <ng-container *ngIf="selectedEquipment!=null">
         <ion-avatar class="equipment">
-          <ion-img *ngIf="!selectedEquipment?.image" alt="Silhouette of a Equipment's head" src="https://ionicframework.com/docs/ion-img/demos/avatar.svg" ></ion-img>
-          <ion-img *ngIf="selectedEquipment?.image" alt="Equipment picture" [src]="selectedEquipment?.image" ></ion-img>
+          <ion-img *ngIf="!selectedEquipment.image" alt="Silhouette of a Equipment's head" src="https://ionicframework.com/docs/ion-img/demos/avatar.svg" ></ion-img>
+          <ion-img *ngIf="selectedEquipment.image" alt="Equipment picture" [src]="selectedEquipment.image" ></ion-img>
         </ion-avatar>
-        <ion-label>{{selectedEquipment?.name_equipment}}</ion-label>
+        <ion-label>{{selectedEquipment.name_equipment}}</ion-label>
       </ng-container>
       <ion-label *ngIf="!selectedEquipment">{{'formEquipment.lblselectabled' | translate}}</ion-label>
     </ion-item>

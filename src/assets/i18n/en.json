@@ -50,14 +50,14 @@
     "aboutme":{
         "title":"About Me",
         "card_content":"This App has been developed with the final puporse that the user can keep track his advances in the Gym and be able to do a train plan in base at his progress",
-        "card_subtitle":"2 DAM's Student",
+        "card_subtitle":"2 DAM's Student | ADD & HLC | CPIFP Malaga Tech Park",
         "tip":"How many time do you train an Muscular Group?",
         "one_week":"Once a week",
         "one_or_twoweek":"Once or Twice a week", 
         "two_or_threeWeek":"Two or Three times a week",   
         "contactme":"Contact Me",  
         "hobbies":"My Hobbies",
-        "textHobbie":"Im just a guy that I like train and feels de pump on my muscles. So I spend a lot of time to learn about the muscles and training, and I realized when you more progress its when you count what you do.  I recommend many books to you, but the book that changed me is the Guide of bodybuilding movements by Frédéric Delavier"
+        "textHobbie":"Im just a guy that I like train and feels de pump on my muscles. So I spend a lot of time to learn about the muscles and training, and I realized when you more progress its when you count what you do."
     },
     "groupMuscular":{
         "upperbodyfront":"Chest",

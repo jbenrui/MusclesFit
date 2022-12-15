@@ -13,7 +13,7 @@ import { WorkoutSVCService } from 'src/app/core/services/workout-svc.service';
   styleUrls: ['./equipment.page.scss'],
 })
 export class EquipmentPage implements OnInit {
-  public equipment:Equipment[] | undefined;
+  public equipment!:Equipment[];
   constructor(
     private equipmentSVC : EquipamentSVCService,
     private workoutSVC : WorkoutSVCService,

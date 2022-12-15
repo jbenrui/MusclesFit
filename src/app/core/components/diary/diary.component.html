@@ -1,7 +1,7 @@
 <ion-card>
   <ion-card-header>
     <ion-card-title>{{diary.dateWorkout | date: 'short'}}</ion-card-title>
-    <ion-card-subtitle>{{getCategoryById(diary?.id)}}</ion-card-subtitle>
+    <ion-card-subtitle>{{getCategoryById(diary.id)}}</ion-card-subtitle>
   </ion-card-header>
 
   <ion-card-content>
@@ -9,10 +9,10 @@
 
       <ng-container *ngIf="screenType()=='BIG'">
         <ion-avatar>
-          <ion-img src="{{getWorkoutImageById(diary?.id)}}"></ion-img>
+          <ion-img src="{{getWorkoutImageById(diary.id)}}"></ion-img>
         </ion-avatar>
         <ion-text id="WorkoutName">
-          {{'diary.lblWorkout' | translate}}: {{getWorkoutNameById(diary?.id)}}
+          {{'diary.lblWorkout' | translate}}: {{getWorkoutNameById(diary.id)}}
         </ion-text>
         
         <ion-text id="WorkoutRep">
@@ -28,11 +28,11 @@
         <ion-grid>
           <ion-row class="ion-align-items-center">
             <ion-col size="12" class="ion-align-self-center">
-              <ion-img src="{{getWorkoutImageById(diary?.id)}}"></ion-img>
+              <ion-img src="{{getWorkoutImageById(diary.id)}}"></ion-img>
             </ion-col>
             <ion-col size="12" class="ion-align-self-center">
               <ion-text id="WorkoutName">
-                {{'diary.lblWorkout' | translate}}: {{getWorkoutNameById(diary?.id)}}
+                {{'diary.lblWorkout' | translate}}: {{getWorkoutNameById(diary.id)}}
               </ion-text>
             </ion-col>
             <ion-col size="9" class="ion-align-self-center">

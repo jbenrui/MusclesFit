@@ -12,32 +12,32 @@ export class EquipamentSVCService {
     {
       id:1,
       name_equipment:"Barbell",
-      image:"/assets/equipment/none_(bodyweight_exercise).webp"
+      image:"/assets/equipment/Barbell.png"
     },
     {
       id:8,
       name_equipment:"Bench",
-      image:"/assets/equipment/none_(bodyweight_exercise).webp"
+      image:"/assets/equipment/Bench.webp"
     },
     {
       id:3,
       name_equipment:"Dumbbell",
-      image:"/assets/equipment/none_(bodyweight_exercise).webp"
+      image:"/assets/equipment/Dumbell.jpg"
     },
     {
       id:4,
       name_equipment:"Gym mat",
-      image:"/assets/equipment/none_(bodyweight_exercise).webp"
+      image:"/assets/equipment/Gym_mat.jpg"
     },
     {
       id:9,
       name_equipment:"Incline bench",
-      image:"/assets/equipment/none_(bodyweight_exercise).webp"
+      image:"/assets/equipment/Incline_bench.jpg"
     },
     {
       id:10,
       name_equipment:"Kettlebell",
-      image:"/assets/equipment/none_(bodyweight_exercise).webp"
+      image:"/assets/equipment/Kettlebell.webp"
     },
     {
       id:7,
@@ -47,42 +47,42 @@ export class EquipamentSVCService {
     {
       id:6,
       name_equipment:"Pull-up bar",
-      image:"/assets/equipment/none_(bodyweight_exercise).webp"
+      image:"/assets/equipment/Pull-up_bar.jpg"
     },
     {
       id:5,
       name_equipment:"Swiss Ball",
-      image:"/assets/equipment/none_(bodyweight_exercise).webp"
+      image:"/assets/equipment/Swiss_Ball.jpg"
     },
     {
       id:2,
       name_equipment:"SZ-Bar",
-      image:"/assets/equipment/none_(bodyweight_exercise).webp"
+      image:"/assets/equipment/SZ-Bar.jpg"
     },
     {
       id: 11,
       name_equipment:"Pulley Ropes",
-      image:"/assets/equipment/none_(bodyweight_exercise).webp"
+      image:"/assets/equipment/Pulley_Row.jpg"
     },
     {
       id: 12,
       name_equipment:"Lat Pull Bar",
-      image:"/assets/equipment/none_(bodyweight_exercise).webp"
+      image:"/assets/equipment/Lat-Pull-Bar.webp"
     },
     {
       id: 13,
       name_equipment:"Rack",
-      image:"/assets/equipment/none_(bodyweight_exercise).webp"
+      image:"/assets/equipment/Rack.jpg"
     },
     {
       id: 14,
       name_equipment:"Hack Squat",
-      image:"/assets/equipment/none_(bodyweight_exercise).webp"
+      image:"/assets/equipment/hack-squat.jpg"
     },
     {
       id: 15,
       name_equipment:"Femoral Machine",
-      image:"/assets/equipment/none_(bodyweight_exercise).webp"
+      image:"/assets/equipment/Femoral-Machine.jpg"
     }
   ]
   private equipmentSubjetc:BehaviorSubject<Equipment[]> = new BehaviorSubject(this._equipment);
@@ -107,7 +107,6 @@ export class EquipamentSVCService {
 
   updateEquipment(equipmentItem:Equipment){
     var _equipment = this._equipment.find(equipment=>equipment.id == equipmentItem.id)
-    console.log(_equipment)
     if (_equipment){
       _equipment.name_equipment = equipmentItem.name_equipment;
     }

@@ -12,25 +12,36 @@ export class AboutmePage implements OnInit {
   ScreenSizeWidth:number = this.ScreenSizeSVC.getScreenSizeWidth();
 
   PhoneWidth:number = 500;
-  TabletWidth:number = 600;
-  MonitorWidth:number = 1000;
+  TabletWidth:number = 700;
+  MonitorWidth:number = 1300;
+
+  slideOpts = {
+    initialSlide: 1,
+    speed: 400
+  };
   constructor( 
     private ScreenSizeSVC : ScreenSizeSVCService
-  ) {}
+  ) {
+
+
+    console.log(this.ScreenSizeWidth)
+  }
 
   getScreenSize(){
     this.ScreenSizeWidth = this.ScreenSizeSVC.getScreenSizeWidth()
    }
 
-   screenType():'BIG'|'SMALL'{
+   screenType():'BIG'|'SMALL'|'MEDIUM'{
       if (this.ScreenSizeWidth <= this.PhoneWidth){
         return 'SMALL'
       }else if (this.ScreenSizeWidth > this.TabletWidth && this.ScreenSizeWidth < this.MonitorWidth ){
-        return 'BIG'
+        return 'MEDIUM'
       }else{
         return 'BIG';
       }
    }
+
+
 
   ngOnInit() {
   }

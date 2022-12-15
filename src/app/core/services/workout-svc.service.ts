@@ -16,49 +16,43 @@ export class WorkoutSVCService {
       name:"Bench Press",
       id_category:1,
       id_equipment:8,
-      image:"/assets/push/bench-press.jpg"
+      image:"/assets/workout/bench-press.jpg"
     },
     {
       id:2,
       name:"Incline Bench Press",
       id_category:1,
       id_equipment:9,
-      image:"/assets/push/bench-press.jpg"
-    },{
+      image:"/assets/workout/incline-bench-press.jpg"
+    },
+    {
       id:3,
       name:"Dips",
       id_category:1,
       id_equipment:7,
-      image:"/assets/push/bench-press.jpg"
+      image:"/assets/workout/dips.jpg"
     },
     //Shoulder Workout
-    {
-      id:4,
-      name:"Arnold Press",
-      id_category:3,
-      id_equipment:3,
-      image:"/assets/push/bench-press.jpg"
-    },
     {
       id:5,
       name:"Military Over Head Press",
       id_category:3,
       id_equipment:1,
-      image:"/assets/push/bench-press.jpg"
+      image:"/assets/workout/shoulder-press.jpg"
     },
     {
       id:6,
       name:"Side Lateral Raise",
       id_category:3,
       id_equipment:3,
-      image:"/assets/push/bench-press.jpg"
+      image:"/assets/workout/dumbbell-lateral-raise.jpg"
     },
     {
       id:7,
       name:"Cable Face Pulls",
       id_category:3,
       id_equipment:11,
-      image:"/assets/push/bench-press.jpg"
+      image:"/assets/workout/face-pull.jpg"
     },
     //Back Exercises
     {
@@ -66,28 +60,14 @@ export class WorkoutSVCService {
       name:"Pull Ups",
       id_category:2,
       id_equipment:6,
-      image:"/assets/push/bench-press.jpg"
+      image:"/assets/workout/pull-ups.jpg"
     },
     {
       id:9,
       name:"Lat Pull",
       id_category:2,
       id_equipment:12,
-      image:"/assets/push/bench-press.jpg"
-    },
-    {
-      id:10,
-      name:"Barbell-Row",
-      id_category:2,
-      id_equipment:1,
-      image:"/assets/push/bench-press.jpg"
-    },
-    {
-      id:11,
-      name:"DeadLift Conventional",
-      id_category:2,
-      id_equipment:1,
-      image:"/assets/push/bench-press.jpg"
+      image:"/assets/workout/lat-pulldown.jpg"
     },
     //Legs Exercises
     {
@@ -95,28 +75,28 @@ export class WorkoutSVCService {
       name:"Squat",
       id_category:4,
       id_equipment:13,
-      image:"/assets/push/bench-press.jpg"
+      image:"/assets/workout/squat.jpg"
     },
     {
       id:13,
       name:"Hack Press",
       id_category:4,
       id_equipment:14,
-      image:"/assets/push/bench-press.jpg"
+      image:"/assets/workout/hack-squat.jpg"
     },
     {
       id:14,
       name:"Lying Femoral Curl",
       id_category:4,
       id_equipment:15,
-      image:"/assets/push/bench-press.jpg"
+      image:"/assets/workout/lying-leg-curl.jpg"
     },
     {
       id:15,
       name:"Seated Leg Curl",
       id_category:4,
       id_equipment:15,
-      image:"/assets/push/bench-press.jpg"
+      image:"/assets/workout/seated-leg-curl.jpg"
     }
   ];
 
@@ -148,13 +128,13 @@ export class WorkoutSVCService {
     this._workout.push(exercise);
   }
 
-  updateWorkout(exercise:Workout){
-    var _exercise = this._workout.find(e=>e.id == e.id);
+  updateWorkout(exerciseItem:Workout){
+    var _exercise = this._workout.find(exercise=>exercise.id == exercise.id);
     if (_exercise){
-      _exercise.name = exercise.name
-      _exercise.id_category = exercise.id_category
-      _exercise.id_equipment = exercise.id_equipment
-      _exercise.image = exercise.image
+      _exercise.name = exerciseItem.name
+      _exercise.id_category = exerciseItem.id_category
+      _exercise.id_equipment = exerciseItem.id_equipment
+      _exercise.image = exerciseItem.image
     }
   }
 }

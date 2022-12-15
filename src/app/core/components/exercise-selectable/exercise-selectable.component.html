@@ -3,10 +3,10 @@
     <ion-item slot="header" color="light">
       <ng-container *ngIf="selectedExercise!=null">
         <ion-avatar class="workout">
-          <ion-img *ngIf="!selectedExercise?.image" alt="Silhouette of a Workout" src="https://ionicframework.com/docs/ion-img/demos/avatar.svg" ></ion-img>
-          <ion-img *ngIf="selectedExercise?.image" alt="Workout picture" [src]="selectedExercise?.image" ></ion-img>
+          <ion-img *ngIf="!selectedExercise.image" alt="Silhouette of a Workout" src="https://ionicframework.com/docs/ion-img/demos/avatar.svg" ></ion-img>
+          <ion-img *ngIf="selectedExercise.image" alt="Workout picture" [src]="selectedExercise.image" ></ion-img>
         </ion-avatar>
-        <ion-label>{{selectedExercise?.name}}</ion-label>
+        <ion-label>{{selectedExercise.name}}</ion-label>
       </ng-container>
       <ion-label *ngIf="!selectedExercise">{{'workout.lblselectabled'|translate}}</ion-label>
     </ion-item>

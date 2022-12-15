@@ -13,7 +13,7 @@ import { WorkoutSVCService } from 'src/app/core/services/workout-svc.service';
   styleUrls: ['./workout.page.scss'],
 })
 export class WorkoutPage implements OnInit {
-  public workout:Workout[] | undefined;
+  public workout!:Workout[];
   constructor(
     private workoutSVC : WorkoutSVCService,
     private DiarySVC:DiarySvcService,

@@ -4,17 +4,29 @@
 
 
 .aboutmeCardBig{
-    width: 50%;
-    margin: auto;
+    width: 45%;
+    margin-left: 40%;
+}
+.groupMuscular{
+    margin-right: 40%;
 }
 
 .aboutmeCardSmall{
     margin: auto;
 }
+.hobbies{
+    margin-right: 40%;
+}
 
-#Hobbies{
+.Contact{
+    width: 60%;
+    margin: auto;
+}
+
+#Titles{
     padding-top: 10px;
     text-align: center;
+    font-size: larger;
 }
 
 ion-text{
@@ -23,4 +35,58 @@ ion-text{
 
 .list-ios {
     background-color: transparent;
+}
+
+
+
+#Contact{
+    width: 50%;
+    margin:auto;
+}
+
+.class-ionbutton{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+}
+#TitleSmall{
+    font-size: large;
+    margin-bottom: 10px;
+}
+
+.aboutmeCardMedium{
+    width: 80%;
+    margin-left: 20%;
+}
+
+.groupMuscularMedium{
+    width: 80%;
+    margin-right: 20%;
+}
+
+.ContactMedium{
+    width: 100%;
+    margin:auto;
+}
+.hobbiesMedium{
+    width: 80%;
+    margin-right: 20%;
+}
+
+ion-button{
+    --background: transparent;
+}
+#contacts{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+#logo{
+    width: 54%;
+    margin:auto;
 }

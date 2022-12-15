@@ -11,7 +11,7 @@ import { EquipamentSVCService } from '../../services/equipament-svc.service';
 export class ExerciseComponent implements OnInit {
 
 
-  @Input() workout:Workout | undefined;
+  @Input() workout!:Workout;
   @Output() onUpdate = new EventEmitter;
   @Output() onDelete = new EventEmitter;
   constructor(

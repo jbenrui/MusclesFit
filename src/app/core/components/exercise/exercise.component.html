@@ -1,9 +1,9 @@
 <ion-card>
     <ion-card-header>
-    <img *ngIf="!workout?.image" src="https://ionicframework.com/docs/img/demos/avatar.svg">
-    <img *ngIf="workout?.image" src="{{workout?.image}}">
-    <ion-card-subtitle>{{getCategoryById(workout?.id_category)}}</ion-card-subtitle>
-    <ion-card-title>{{workout?.name}}</ion-card-title>
+    <img *ngIf="!workout.image" src="https://ionicframework.com/docs/img/demos/avatar.svg">
+    <img *ngIf="workout.image" src="{{workout.image}}">
+    <ion-card-subtitle>{{getCategoryById(workout.id_category)}} | {{getEquipmentById(workout.id_category)}} </ion-card-subtitle>
+    <ion-card-title>{{workout.name}}</ion-card-title>
   </ion-card-header>
 
   <ion-card-content>

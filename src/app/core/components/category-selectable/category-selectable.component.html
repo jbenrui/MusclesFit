@@ -4,9 +4,9 @@
         <ng-container *ngIf="selectedCategory!=null">
           <ion-avatar class="category">
             <ion-img *ngIf="!selectedCategory?.image" alt="Silhouette of a category's head" src="https://ionicframework.com/docs/ion-img/demos/avatar.svg" ></ion-img>
-            <ion-img *ngIf="selectedCategory?.image" alt="Category picture" [src]="selectedCategory?.image" ></ion-img>
+            <ion-img *ngIf="selectedCategory?.image" alt="Category picture" [src]="selectedCategory.image" ></ion-img>
           </ion-avatar>
-          <ion-label>{{selectedCategory?.nameCategory}}</ion-label>
+          <ion-label>{{selectedCategory.nameCategory}}</ion-label>
         </ng-container>
         <ion-label *ngIf="!selectedCategory">{{'category.lblselectabled' | translate}}</ion-label>
       </ion-item>

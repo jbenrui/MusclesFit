@@ -10,27 +10,27 @@ export class CategoryWorkoutSVCService {
     {
       id:1,
       nameCategory:"Chest",
-      image:"/assets/category/IconChest.webp"
+      image:"/assets/category/IconChest.jpg"
     },
     {
       id:2,
       nameCategory:"Back",
-      image:"/assets/category/IconBack.webp"
+      image:"/assets/category/IconBack.jpg"
     },
     {
       id:3,
       nameCategory:"Arms",
-      image:"/assets/category/IconArm.webp"
+      image:"/assets/category/IconArm.jpg"
     },
     {
       id:4,
       nameCategory:"Legs",
-      image:"/assets/category/IconLegDay.webp"
+      image:"/assets/category/IconLegDay.jpg"
     },
     {
       id:5,
       nameCategory:"Shoulder",
-      image:"/assets/category/IconShoulder.webp"
+      image:"/assets/category/IconShoulder.jpg"
     },
   ]
   private categorySubjetc:BehaviorSubject<CategoryWorkout[]> = new BehaviorSubject(this._category);

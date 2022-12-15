@@ -9,7 +9,7 @@ import { Equipment } from '../../model/equipment';
 export class EquipmentItemComponent implements OnInit {
   @Output() onUpdate = new EventEmitter;
   @Output() onDelete = new EventEmitter;
-  @Input() equipment:Equipment | undefined;
+  @Input() equipment!:Equipment;
   constructor() { }
 
   ngOnInit() {}

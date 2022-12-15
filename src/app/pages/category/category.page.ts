@@ -13,7 +13,7 @@ import { WorkoutSVCService } from 'src/app/core/services/workout-svc.service';
   styleUrls: ['./category.page.scss'],
 })
 export class CategoryPage implements OnInit {
-  public category:CategoryWorkout[] | undefined;
+  public category!:CategoryWorkout[];
   constructor(
     private categorySVC : CategoryWorkoutSVCService,
     private workoutSVC : WorkoutSVCService,

@@ -8,7 +8,7 @@ import { CategoryWorkout } from '../../model/categoryWorkout';
 })
 export class CategoryItemComponent implements OnInit {
 
-  @Input() category:CategoryWorkout | undefined;
+  @Input() category!:CategoryWorkout;
   @Output() onUpdate = new EventEmitter
   @Output() onDelete = new EventEmitter;
 
